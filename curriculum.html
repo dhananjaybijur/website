@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum — doors2ai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">doors<span>2</span>ai</a>
+      <div class="nav-links">
+        <a href="programs.html">Programs</a>
+        <a href="curriculum.html" class="active">Curriculum</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- CURRICULUM HERO -->
+  <div class="curr-hero">
+    <div class="curr-hero-inner">
+      <div class="section-label">Curriculum</div>
+      <h1>Agentic AI Engineering —<br><em>Full Curriculum</em></h1>
+      <p>12 modules locked in sequence. Built from absolute beginner to enterprise-capable AI engineer. Every module is a prerequisite for the next.</p>
+      <div class="curr-progress">
+        <div class="prog-seg seg-found" style="flex:3"></div>
+        <div class="prog-seg seg-core" style="flex:5"></div>
+        <div class="prog-seg seg-adv" style="flex:4"></div>
+      </div>
+      <div style="display:flex;gap:20px;margin-top:10px;flex-wrap:wrap">
+        <span style="font-size:11px;font-weight:600;color:var(--track-fe-text)">■ Foundations</span>
+        <span style="font-size:11px;font-weight:600;color:var(--track-ai-text)">■ Core AI Stack</span>
+        <span style="font-size:11px;font-weight:600;color:var(--brand)">■ Advanced &amp; Capstone</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB SECTION -->
+  <div class="tab-section">
+    <div class="tab-section-inner">
+      <div class="tab-bar">
+        <button class="tab active" onclick="switchTab('foundations')">Foundations</button>
+        <button class="tab" onclick="switchTab('core')">Core AI Stack</button>
+        <button class="tab" onclick="switchTab('advanced')">Advanced &amp; Capstone</button>
+      </div>
+
+      <!-- FOUNDATIONS -->
+      <div id="tab-foundations">
+        <div class="modules-grid">
+          <div class="module-card">
+            <div class="module-num" style="background:var(--bg-2);color:var(--text-2)">0</div>
+            <h3>Environment Setup</h3>
+            <div class="module-dur">60–90 min · One-time setup</div>
+            <ul class="module-topics">
+              <li>Python installation &amp; configuration</li>
+              <li>VS Code + AI extensions</li>
+              <li>Virtual environments &amp; dependency management</li>
+              <li>First Python run</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--track-ai-bg);color:var(--track-ai-text)">A</div>
+            <h3>Python for Agentic AI</h3>
+            <div class="module-dur">~3 weeks · Absolute beginner</div>
+            <ul class="module-topics">
+              <li>Variables as agent memory</li>
+              <li>Strings &amp; prompt construction</li>
+              <li>Lists, dicts, sets, tuples</li>
+              <li>Control flow as guardrails</li>
+              <li>Functions as agent capabilities</li>
+              <li>Error handling &amp; safe execution</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--track-ai-bg);color:var(--track-ai-text)">A+</div>
+            <h3>Type Annotations</h3>
+            <div class="module-dur">1 week · Bridge module</div>
+            <ul class="module-topics">
+              <li>Why types matter in agent systems</li>
+              <li>Optional &amp; Union types</li>
+              <li>TypedDict state blueprints</li>
+              <li>Pydantic for structured outputs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CORE AI STACK -->
+      <div id="tab-core" style="display:none">
+        <div class="modules-grid">
+          <div class="module-card">
+            <div class="module-num" style="background:var(--track-ai-bg);color:var(--track-ai-text)">B</div>
+            <h3>LLMs &amp; Prompt Engineering</h3>
+            <ul class="module-topics">
+              <li>What LLMs are — and aren't</li>
+              <li>Prompt anatomy: 5 core components</li>
+              <li>Output control &amp; JSON formatting</li>
+              <li>Hallucination mitigation strategies</li>
+              <li>System vs user vs assistant roles</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--track-ai-bg);color:var(--track-ai-text)">C</div>
+            <h3>Embeddings &amp; Semantic Search</h3>
+            <ul class="module-topics">
+              <li>Meaning as vector space</li>
+              <li>Semantic vs keyword search</li>
+              <li>Embedding lifecycle</li>
+              <li>Cosine similarity in practice</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--track-ai-bg);color:var(--track-ai-text)">D</div>
+            <h3>RAG Architecture</h3>
+            <ul class="module-topics">
+              <li>Ingestion, retrieval, reasoning pipeline</li>
+              <li>FAISS, Chroma, Pinecone</li>
+              <li>RAG failure modes &amp; mitigation</li>
+              <li>Context window management</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--track-ai-bg);color:var(--track-ai-text)">E</div>
+            <h3>LangChain Orchestration</h3>
+            <ul class="module-topics">
+              <li>Sequential, conditional &amp; parallel chains</li>
+              <li>RAG implementation with LangChain</li>
+              <li>Tools as callable capabilities</li>
+              <li>Memory &amp; conversation management</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--track-ai-bg);color:var(--track-ai-text)">F</div>
+            <h3>Agents — Mental Models</h3>
+            <ul class="module-topics">
+              <li>What an agent actually is</li>
+              <li>Levels of agent autonomy</li>
+              <li>Guardrails &amp; stop conditions</li>
+              <li>Agent failure taxonomy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADVANCED & CAPSTONE -->
+      <div id="tab-advanced" style="display:none">
+        <div class="modules-grid">
+          <div class="module-card">
+            <div class="module-num" style="background:var(--brand-light);color:var(--brand-dark)">G</div>
+            <h3>LangGraph</h3>
+            <ul class="module-topics">
+              <li>State machines for LLM systems</li>
+              <li>Nodes, edges, conditional routing</li>
+              <li>Loops &amp; retry logic</li>
+              <li>Debuggable agent workflows</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--brand-light);color:var(--brand-dark)">H</div>
+            <h3>MCP — Governance</h3>
+            <ul class="module-topics">
+              <li>Context boundaries &amp; scope</li>
+              <li>Permissions &amp; capability control</li>
+              <li>Auditability &amp; compliance tracing</li>
+              <li>Production safety patterns</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--brand-light);color:var(--brand-dark)">I</div>
+            <h3>APIs, Streamlit &amp; Git</h3>
+            <ul class="module-topics">
+              <li>Exposing AI via UI</li>
+              <li>LangGraph + Streamlit integration</li>
+              <li>GitHub project structure</li>
+              <li>Production-ready deployment</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--brand-light);color:var(--brand-dark)">J</div>
+            <h3>Advanced RAG</h3>
+            <ul class="module-topics">
+              <li>Chunking strategies &amp; optimisation</li>
+              <li>Hybrid search (BM25 + semantic)</li>
+              <li>Multi-stage retrieval pipelines</li>
+              <li>Re-ranking &amp; relevance scoring</li>
+            </ul>
+          </div>
+          <div class="module-card">
+            <div class="module-num" style="background:var(--brand-light);color:var(--brand-dark)">K</div>
+            <h3>Multi-Agent Systems</h3>
+            <ul class="module-topics">
+              <li>Supervisor / Worker pattern</li>
+              <li>Plan → Execute → Validate loop</li>
+              <li>Orchestration governance</li>
+              <li>Inter-agent communication</li>
+            </ul>
+          </div>
+          <div class="module-card capstone">
+            <div class="module-num" style="background:var(--brand-light);color:var(--brand-dark)">L</div>
+            <h3>Enterprise Capstone Project</h3>
+            <div class="module-dur">2 weeks · Graded delivery</div>
+            <ul class="module-topics">
+              <li>Typed LangGraph state required</li>
+              <li>RAG pipeline + vector store</li>
+              <li>MCP governance layer</li>
+              <li>Multi-agent orchestration</li>
+              <li>GitHub documentation + Streamlit delivery</li>
+              <li>Peer review &amp; final presentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="section-label">Enroll</div>
+      <h2>Ready to start your AI engineering journey?</h2>
+      <p>Applications are open. No prior coding experience required — just a commitment to learn properly.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn-cta-primary">Apply Now</a>
+        <a href="pricing.html" class="btn-cta-ghost">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">doors<span>2</span>ai</a>
+        <p class="footer-tagline">Structured AI engineering education — beginner to production-ready.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="programs.html#frontend">Frontend Engineering</a>
+        <a href="programs.html#fullstack">Full Stack Development</a>
+        <a href="programs.html#agentic">Agentic AI Engineering</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Apply</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="mailto:hello@doors2ai.com">hello@doors2ai.com</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 doors2ai · Toronto, Canada. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(t) {
+      ['foundations','core','advanced'].forEach(function(id) {
+        document.getElementById('tab-' + id).style.display = (id === t) ? 'block' : 'none';
+      });
+      document.querySelectorAll('.tab').forEach(function(el, i) {
+        el.classList.toggle('active', ['foundations','core','advanced'][i] === t);
+      });
+    }
+  </script>
+
+</body>
+</html>
