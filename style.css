@@ -22,12 +22,12 @@
   --track-ai-text:  #4A43B7;
 
   --bg:             #FFFFFF;
-  --bg-2:           #F8F8F6;
+  --bg-2:           #F7FAFC;
   --bg-dark:        #0C1A14;
 
-  --text:           #0D0D0D;
-  --text-2:         #525252;
-  --text-3:         #9A9A9A;
+  --text:           #1A1A1A;
+  --text-2:         #606060;
+  --text-3:         #929292;
   --text-inv:       #FFFFFF;
 
   --border:         #D6D6D6;
@@ -501,6 +501,8 @@ ul { list-style: none; }
   padding: 28px 28px 28px 32px;
   border-left: 3px solid transparent;
   background: var(--bg);
+  display: flex;
+  flex-direction: column;
   /* [V4] Right divider between steps */
   border-right: 1px solid var(--border-2);
   transition: background var(--ease);
@@ -563,6 +565,8 @@ ul { list-style: none; }
   font-weight: 600;
   padding: 4px 11px;
   border-radius: var(--r-pill);
+  margin-top: auto;
+  align-self: flex-start;
 }
 .badge-fe { background: var(--track-fe-bg); color: var(--track-fe-text); }
 .badge-fs { background: var(--track-fs-bg); color: var(--track-fs-text); }
@@ -1601,4 +1605,29 @@ details.faq-item[open] summary { color: var(--text); }
 
 @media (max-width: 440px) {
   .outcomes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Dark hero variant for AI program pages */
+
+.page-hero-dark {
+  background:
+    radial-gradient(ellipse at 50% -40%, rgba(29,158,117,0.12) 0%, transparent 65%),
+    #0C1A14;
+  color:white;
+}
+
+.page-hero-dark h1 {
+  color:white;
+}
+
+.page-hero-dark p {
+  color:rgba(255,255,255,0.75);
+}
+
+.page-hero-dark .section-label {
+  color:var(--brand);
+}
+
+.page-hero-dark .section-label::before {
+  background:var(--brand);
 }
