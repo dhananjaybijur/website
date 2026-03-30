@@ -43,8 +43,11 @@
       <h2>Application &amp; Enquiry Form</h2>
       <p>Applications help ensure learners are placed in the right program level.</p>
 
-      <!-- PLACEHOLDER: Replace action with your form handler, Formspree endpoint, or Typeform embed -->
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+
+        <input type="hidden" name="cd1f7834-74c7-42f7-b521-07e17910988d" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Application — doors2ai">
+        <input type="checkbox" name="botcheck" style="display:none">
 
         <div class="form-row">
           <div class="form-group">
@@ -110,7 +113,6 @@
         </div>
 
         <div class="form-submit">
-          <!-- PLACEHOLDER: Form submission — connect to Formspree, Netlify Forms, or equivalent -->
           <button type="submit" class="btn-submit">Submit Application</button>
           <p style="font-size:12.5px;color:var(--text-3);margin-top:12px;line-height:1.6">
             By submitting this form you agree that doors2ai may contact you about your application.
