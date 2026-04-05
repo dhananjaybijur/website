@@ -3,23 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>doors2ai — AI Engineering Bootcamp</title>
+  <title>Doors2AI | Learn AI Engineering and Full Stack Development</title>
+  <meta name="description" content="Learn web development, full stack engineering, and AI application development through structured programs at Doors2AI. Beginner to intermediate learning paths.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://doors2ai.com/index.html">
+  <link rel="icon" href="doors2ai_logo.png">
+  <meta property="og:title" content="Doors2AI | Learn AI Engineering and Full Stack Development">
+  <meta property="og:description" content="Learn web development, full stack engineering, and AI application development through structured programs at Doors2AI. Beginner to intermediate learning paths.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://doors2ai.com/index.html">
+  <meta property="og:image" content="https://doors2ai.com/doors2ai_logo.png">
+  <meta name="last-modified" content="April 2026">
+  <!-- Google Analytics script will be added here -->
+  <!-- Google Search Console verification tag will be added here -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Beta Cohort section — index.html only */
+    .beta-cohort {
+      padding: 72px var(--pad);
+      background: rgba(29,158,117,0.07);
+    }
+    .beta-cohort .section-label { color: var(--brand); }
+    .beta-cohort .section-label::before { background: var(--brand); }
+    .beta-cohort .section-head h2 { color: var(--text); max-width: 560px; }
+    .beta-cohort .section-head p { color: var(--text-2); max-width: 560px; }
+    .beta-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      background: rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .beta-step {
+      background: #ffffff;
+      padding: 26px 22px;
+      transition: background var(--ease);
+    }
+    .beta-step:hover { background: var(--bg-2); }
+    .beta-step-num {
+      font-size: 26px;
+      font-weight: 600;
+      color: #1d9e75;
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .beta-step h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: -0.2px;
+    }
+    .beta-step p {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    .beta-cohort .btn-cta-primary { margin-top: 10px; display: inline-block; }
+    .beta-outcome {
+      font-size: 14px;
+      color: var(--text-2);
+      border-left: 2px solid var(--brand);
+      padding: 12px 16px;
+      background: rgba(29,158,117,0.08);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      margin-bottom: 28px;
+      line-height: 1.6;
+      max-width: 620px;
+    }
+    @media (max-width: 900px) {
+      .beta-steps { grid-template-columns: repeat(2, 1fr); }
+      .beta-steps .beta-step:last-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 500px) {
+      .beta-steps { grid-template-columns: 1fr; }
+      .beta-steps .beta-step:last-child { grid-column: 1; }
+    }
+  </style>
 </head>
 <body>
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="logo">doors<span>2</span>ai</a>
+      <a href="/" class="logo">doors<span>2</span>ai</a>
       <div class="nav-links">
         <a href="programs.html">Programs</a>
         <a href="curriculum.html">Curriculum</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </div>
       <a href="contact.html" class="nav-cta">Apply Now</a>
@@ -29,29 +109,75 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-tag">
-        <div class="live-dot"></div>
-        Now enrolling — Online Cohort
+
+      <!-- Left: hero text and CTAs (unchanged) -->
+      <div class="hero-content">
+        <div class="hero-tag">
+          <div class="live-dot"></div>
+          Now enrolling — Weekend Online Cohort
+        </div>
+
+        <h1>From Beginner To<br><em> AI Developer</em> —<br>A Structured Project Based Path</h1>
+
+        <div class="cta-row">
+          <a href="programs.html" class="btn-primary">Explore Programs</a>
+          <a href="curriculum.html" class="btn-secondary">View Curriculum</a>
+        </div>
+
+        <div class="hero-meta">
+          <span class="hero-meta-item">No prior programming experience required</span>
+          <span class="hero-meta-item">Weekend cohort learning</span>
+          <span class="hero-meta-item">Real projects with industry-guided instruction</span>
+        </div>
       </div>
 
-      <h1>From beginner to<br><em>AI engineer</em> —<br>the structured path.</h1>
 
-      <p class="hero-sub">
-        doors2ai is an instructor-led online training platform for people who want a serious path into AI
-        engineering and modern software development. Learn Python, full stack fundamentals, RAG, LangChain,
-        LangGraph, and agentic AI systems through a structured curriculum designed to take you from beginner to
-        production-ready.
-      </p>
+    </div>
+  </section>
 
-      <div class="cta-row">
-        <a href="programs.html" class="btn-primary">Explore Programs</a>
-        <a href="curriculum.html" class="btn-secondary">View Curriculum</a>
+  <!-- BETA COHORT -->
+  <section class="beta-cohort">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Beta Cohort</div>
+        <h2>Join the doors2ai cohort.</h2>
+        <p>A guided cohort for learners who want practical training in web development, full stack development, and AI application building. This cohort combines selected topics from all three learning paths.</p>
       </div>
-
-      <div class="hero-meta">
-        <span class="hero-meta-item">No CS degree required</span>
-        <span class="hero-meta-item">Beginner to production-ready</span>
-        <span class="hero-meta-item">Live online cohort learning</span>
+      <div class="beta-steps">
+        <div class="beta-step">
+          <div class="beta-step-num">01</div>
+          <h3>Foundations</h3>
+          <p>Understand how the web works and build interactive pages using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="beta-step">
+          <div class="beta-step-num">02</div>
+          <h3>Modern Frontend</h3>
+          <p>Build a React/Next.js application using modern project structure.</p>
+        </div>
+        <div class="beta-step">
+          <div class="beta-step-num">03</div>
+          <h3>Backend Development</h3>
+          <p>Develop APIs using Python and FastAPI.</p>
+        </div>
+        <div class="beta-step">
+          <div class="beta-step-num">04</div>
+          <h3>Database Integration</h3>
+          <p>Store and manage application data using PostgreSQL.</p>
+        </div>
+        <div class="beta-step">
+          <div class="beta-step-num">05</div>
+          <h3>AI Integration</h3>
+          <p>Add an AI assistant chatbot powered by OpenAI.</p>
+        </div>
+      </div>
+      <p class="beta-outcome">By the end of the cohort, you will have built a complete AI-enabled full-stack project.</p>
+      <a href="contact.html" class="btn-cta-primary">Join the Cohort</a>
+      <div class="cohort-meta">
+        <span class="cohort-start">Starts Early June 2026</span>
+        <span class="cohort-divider">•</span>
+        <span class="cohort-price">Introductory cohort price: $70 USD / ₹5,000 INR</span>
+        <span class="cohort-divider">•</span>
+        <span class="cohort-urgency">Limited seats</span>
       </div>
     </div>
   </section>
@@ -63,25 +189,25 @@
         <div class="trust-icon">
           <svg viewBox="0 0 16 16"><path d="M2 4h12M2 8h8M2 12h5" stroke-linecap="round"/></svg>
         </div>
-        Structured learning paths
+        Structured learning path
       </div>
       <div class="trust-item">
         <div class="trust-icon">
           <svg viewBox="0 0 16 16"><path d="M8 2l1.5 4H15l-4 2.9 1.5 4.6L8 11 4.5 13.5 6 8.9 2 6h5.5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        Beginner to production-ready
+        Beginner to production-ready progression
       </div>
       <div class="trust-item">
         <div class="trust-icon">
           <svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        Real projects and capstone work
+        Real projects and portfolio building
       </div>
       <div class="trust-item">
         <div class="trust-icon">
           <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2" stroke-linecap="round"/></svg>
         </div>
-        Live online instructor guidance
+        Live instructor guidance
       </div>
     </div>
   </div>
@@ -91,8 +217,8 @@
     <div class="wrap">
       <div class="section-head">
         <div class="section-label">Why doors2ai</div>
-        <h2>Not tutorials. A real engineering curriculum.</h2>
-        <p>Most online courses teach tools in isolation. doors2ai teaches structured engineering thinking — how to build, explain, and improve real systems with the right foundations, workflows, and guidance from the start.</p>
+        <h2>Not scattered tutorials. A structured path to building real applications.</h2>
+        <p>Most online courses teach tools in isolation. doors2ai brings everything together into a guided learning path so students can build skills step by step, work on real projects, and grow toward full stack and AI application development with confidence.</p>
       </div>
       <div class="why-grid">
         <div class="why-card">
@@ -106,22 +232,22 @@
           <div class="why-icon">
             <svg viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Beginner-safe, serious training</h3>
-          <p>Start with fundamentals, build proper mental models, and progress into real engineering workflows without being overwhelmed on day one.</p>
+          <h3>Built for steady progression</h3>
+          <p>Start with fundamentals, build confidence through practice, and progress into full stack and AI application development at a practical pace.</p>
         </div>
         <div class="why-card">
           <div class="why-icon">
             <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="M10 6.5v3.5l2.5 2.5" stroke-linecap="round"/></svg>
           </div>
           <h3>Real projects, not toy demos</h3>
-          <p>Build portfolio-ready applications, full-stack systems, and AI projects that reflect how modern products are actually delivered.</p>
+          <p>Build practical applications and portfolio-ready work that reflect how modern products are planned, built, and improved.</p>
         </div>
         <div class="why-card">
           <div class="why-icon">
             <svg viewBox="0 0 20 20"><path d="M4 17V9l6-7 6 7v8M7 17v-5h6v5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Production mindset from the start</h3>
-          <p>Learn how systems behave in practice — including reliability, guardrails, architecture, and delivery — not just how to make a demo run once.</p>
+          <h3>Industry-shaped guidance</h3>
+          <p>Learn with practical direction shaped by real industry experience, project delivery, and modern development workflows.</p>
         </div>
       </div>
     </div>
@@ -132,14 +258,14 @@
     <div class="path-inner">
       <div class="section-head">
         <div class="section-label">Learning Path</div>
-        <h2>One cohesive track. Three career outcomes.</h2>
-        <p>Choose your entry point based on your background and goals. Each online program is designed to stand on its own while also connecting into a longer path from frontend foundations to full stack development to AI engineering.</p>
+        <h2>One structured learning path. Three progressive paths.</h2>
+        <p>Start with foundations, progress into full stack development, and then move into AI application development through a structured path designed for students and working professionals.</p>
       </div>
       <div class="path-track">
         <div class="path-step track-fe">
-          <div class="path-num">Track 01</div>
-          <h3>Frontend Engineering</h3>
-          <p>Learn how to build modern, responsive user interfaces with the tools used in production teams. Ideal for beginners starting their development journey.</p>
+          <div class="path-num">Path 1</div>
+          <h3>Web Development Foundations</h3>
+          <p>Build programming fundamentals and learn how to create modern responsive web applications. Ideal for beginners starting their journey.</p>
           <div class="path-tech-tags">
             <span class="tech-tag">HTML</span>
             <span class="tech-tag">CSS</span>
@@ -148,33 +274,34 @@
             <span class="tech-tag">React</span>
             <span class="tech-tag">Next.js</span>
           </div>
-          <span class="path-badge badge-fe">8 weeks</span>
+          <span class="path-badge badge-fe">8–10 weeks</span>
         </div>
         <div class="path-step track-fs">
-          <div class="path-num">Track 02</div>
+          <div class="path-num">Path 2</div>
           <h3>Full Stack Development</h3>
-          <p>Go beyond the frontend and learn how applications work end to end, including APIs, backend logic, databases, and deployment.</p>
-          <div class="path-tech-tags">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">REST APIs</span>
-            <span class="tech-tag">Databases</span>
-            <span class="tech-tag">Auth</span>
-            <span class="tech-tag">Deployment</span>
-          </div>
-          <span class="path-badge badge-fs">10 weeks</span>
-        </div>
-        <div class="path-step track-ai">
-          <div class="path-num">Track 03 — Flagship</div>
-          <h3>Agentic AI Engineering</h3>
-          <p>Build the AI engineering stack properly — from Python and prompt design to RAG, orchestration, governance, and production-oriented agent workflows.</p>
+          <p>Learn how complete applications work end to end, including backend services, APIs, databases, and deployment.</p>
           <div class="path-tech-tags">
             <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Git/GitHub</span>
+            <span class="tech-tag">APIs</span>
+            <span class="tech-tag">Deployment</span>
+          </div>
+          <span class="path-badge badge-fs">12–14 weeks</span>
+        </div>
+        <div class="path-step track-ai">
+          <div class="path-num">Path 3</div>
+          <h3>AI Application Development</h3>
+          <p>Build practical AI applications using modern LLM tools, retrieval workflows, and AI application patterns.</p>
+          <div class="path-tech-tags">
+            <span class="tech-tag">LLMs</span>
             <span class="tech-tag">RAG</span>
             <span class="tech-tag">LangChain</span>
             <span class="tech-tag">LangGraph</span>
-            <span class="tech-tag">Multi-Agent</span>
+            <span class="tech-tag">AI Workflows</span>
           </div>
-          <span class="path-badge badge-ai">14 weeks</span>
+          <span class="path-badge badge-ai">16 weeks</span>
         </div>
       </div>
     </div>
@@ -186,24 +313,24 @@
       <div class="section-head">
         <div class="section-label">Programs</div>
         <h2>Choose your starting point.</h2>
-        <p>Each program is self-contained. Start where you are, build strong foundations, and progress toward modern full stack and AI engineering work through a structured learning path.</p>
+        <p>Start where you are and progress through a structured learning path designed to help you build real applications, strengthen your portfolio, and grow toward AI development.</p>
       </div>
       <div class="programs-grid">
 
         <div class="prog-card">
           <div class="prog-card-header">
-            <span class="prog-badge fe">Frontend</span>
+            <span class="prog-badge fe">Path 1</span>
           </div>
-          <h3>Frontend Engineering Bootcamp</h3>
+          <h3>Web Development Foundations</h3>
           <div class="prog-meta">
-            8 weeks <span class="prog-meta-dot"></span> Beginner
+            8–10 weeks <span class="prog-meta-dot"></span> Beginner
           </div>
           <ul class="prog-modules">
             <li>HTML, CSS, and JavaScript foundations</li>
-            <li>TypeScript &amp; type-safe development</li>
-            <li>React &amp; component-based architecture</li>
-            <li>Next.js &amp; production deployment</li>
-            <li>Portfolio project you can show and explain</li>
+            <li>TypeScript and modern frontend development</li>
+            <li>React and component-based UI building</li>
+            <li>Next.js and deployment basics</li>
+            <li>Project you can showcase and explain</li>
           </ul>
           <div class="prog-footer">
             <a href="programs.html#frontend" class="prog-cta">View full program →</a>
@@ -212,18 +339,18 @@
 
         <div class="prog-card">
           <div class="prog-card-header">
-            <span class="prog-badge fs">Full Stack</span>
+            <span class="prog-badge fs">Path 2</span>
           </div>
-          <h3>Full Stack Development Bootcamp</h3>
+          <h3>Full Stack Development</h3>
           <div class="prog-meta">
-            10 weeks <span class="prog-meta-dot"></span> Intermediate
+            12–14 weeks <span class="prog-meta-dot"></span> Beginner to Intermediate
           </div>
           <ul class="prog-modules">
-            <li>REST APIs &amp; backend architecture</li>
-            <li>Node.js &amp; server-side logic</li>
-            <li>Auth, sessions &amp; data modeling</li>
-            <li>Database design &amp; integration</li>
-            <li>Complete full stack capstone application</li>
+            <li>Python and backend development basics</li>
+            <li>FastAPI and API development</li>
+            <li>PostgreSQL and database integration</li>
+            <li>Git/GitHub and practical project workflow</li>
+            <li>Full stack application project</li>
           </ul>
           <div class="prog-footer">
             <a href="programs.html#fullstack" class="prog-cta">View full program →</a>
@@ -232,22 +359,18 @@
 
         <div class="prog-card featured">
           <div class="prog-card-header">
-            <span class="prog-badge ai">Agentic AI</span>
-            <span class="prog-flagship">Flagship Program</span>
+            <span class="prog-badge ai">Path 3</span>
           </div>
-          <h3>Agentic AI Engineering Bootcamp</h3>
+          <h3>AI Application Development</h3>
           <div class="prog-meta">
-            14 weeks <span class="prog-meta-dot"></span> Beginner to Advanced
+            16 weeks <span class="prog-meta-dot"></span> Intermediate
           </div>
           <ul class="prog-modules">
-            <li>Python for AI systems (zero to proficient)</li>
-            <li>Prompt engineering &amp; LLM fundamentals</li>
-            <li>Embeddings &amp; retrieval-based search</li>
-            <li>RAG architecture &amp; vector databases</li>
-            <li>LangChain + LangGraph orchestration</li>
-            <li>Governance, guardrails &amp; production safety</li>
-            <li>Multi-agent system design</li>
-            <li>Enterprise capstone project</li>
+            <li>LLM foundations and prompting basics</li>
+            <li>Retrieval-augmented generation (RAG)</li>
+            <li>LangChain and LangGraph workflows</li>
+            <li>AI workflows and application patterns</li>
+            <li>Practical AI application capstone</li>
           </ul>
           <div class="prog-footer">
             <a href="programs.html#agentic" class="prog-cta">View full program →</a>
@@ -261,28 +384,45 @@
   <!-- OUTCOMES -->
   <section class="outcomes-section">
     <div class="outcomes-inner">
-      <div class="section-head" style="text-align:center">
-        <div class="section-label" style="justify-content:center">Outcomes</div>
-        <h2>What students leave with</h2>
-        <p style="margin:0 auto;text-align:center">Every doors2ai learner finishes with practical work, clearer technical judgment, and a stronger path into modern engineering roles.</p>
+      <div class="outcomes-head">
+        <div class="section-label">Outcomes</div>
+        <h2>What you will gain</h2>
+        <p>Every doors2ai learner finishes with practical work, stronger technical confidence, and a clearer path toward building modern applications.</p>
       </div>
       <div class="outcomes-grid">
-        <div class="outcome-item">
-          <div class="outcome-num">12</div>
-          <div class="outcome-label">Structured<br>modules</div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon-wrap">
+            <svg viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="10" rx="2"/><path d="M5 8l2.5 2.5L11 6"/></svg>
+          </div>
+          <div class="outcome-card-title">Build</div>
+          <div class="outcome-card-desc">Create real full-stack and AI applications</div>
         </div>
-        <div class="outcome-item">
-          <div class="outcome-num">1</div>
-          <div class="outcome-label">Enterprise<br>capstone project</div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon-wrap">
+            <svg viewBox="0 0 16 16"><path d="M8 2v9M4 6l4-4 4 4M3 13h10"/></svg>
+          </div>
+          <div class="outcome-card-title">Ship</div>
+          <div class="outcome-card-desc">Learn how to deploy working products</div>
         </div>
-        <div class="outcome-item">
-          <div class="outcome-num">6<span class="suffix">+</span></div>
-          <div class="outcome-label">Shipped<br>projects</div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon-wrap">
+            <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M7 7c0-1 .5-1.5 1-1.5s1.5.4 1.5 1.2c0 .8-.8 1.2-1.2 1.6C8 8.6 8 9 8 9.5M8 11.5v.5"/></svg>
+          </div>
+          <div class="outcome-card-title">Explain</div>
+          <div class="outcome-card-desc">Understand what you build and how it works</div>
         </div>
-        <div class="outcome-item">
-          <div class="outcome-num">0</div>
-          <div class="outcome-label">Prior experience<br>needed</div>
+
+        <div class="outcome-card">
+          <div class="outcome-icon-wrap">
+            <svg viewBox="0 0 16 16"><path d="M2 11l4-4 3 3 5-7"/><path d="M12 3h3v3"/></svg>
+          </div>
+          <div class="outcome-card-title">Grow</div>
+          <div class="outcome-card-desc">Develop strong technical foundations and confidence</div>
         </div>
+
       </div>
     </div>
   </section>
@@ -292,10 +432,10 @@
     <div class="cta-inner">
       <div class="section-label">Start your path</div>
       <h2>Ready to learn seriously and build with confidence?</h2>
-      <p>Join doors2ai and follow a structured online learning path into full stack development, AI engineering, and agentic AI — with real projects, live guidance, and a curriculum built for real-world delivery.</p>
+      <p>Join doors2ai and follow a structured learning path designed for students and working professionals. Build real applications, strengthen your portfolio, and grow toward AI development through live weekend learning and practical project work.</p>
       <div class="cta-buttons">
         <a href="contact.html" class="btn-cta-primary">Apply Now</a>
-        <a href="curriculum.html" class="btn-cta-ghost">View Full Curriculum</a>
+        <a href="curriculum.html" class="btn-cta-ghost">View Curriculum</a>
       </div>
     </div>
   </section>
@@ -305,20 +445,21 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="footer-logo">doors<span>2</span>ai</a>
-        <p class="footer-tagline">Structured AI engineering education — beginner to production-ready.</p>
+        <p class="footer-tagline">Structured AI and software development learning — from foundations to real applications.</p>
       </div>
       <div class="footer-col">
         <h4>Programs</h4>
-        <a href="programs.html#frontend">Frontend Engineering</a>
+        <a href="programs.html#frontend">Web Development Foundations</a>
         <a href="programs.html#fullstack">Full Stack Development</a>
-        <a href="programs.html#agentic">Agentic AI Engineering</a>
+        <a href="programs.html#agentic">AI Application Development</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <a href="about.html">About</a>
         <a href="curriculum.html">Curriculum</a>
         <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Apply</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
       </div>
       <div class="footer-col">
         <h4>Support</h4>
@@ -328,11 +469,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 doors2ai · Toronto, Canada. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-      </div>
+      <p class="footer-copy">© 2026 doors2ai. All rights reserved.</p>
     </div>
   </footer>
 

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Engineering Blog | Doors2AI</title>
+  <meta name="description" content="Doors2AI blog covering AI engineering, full stack development, and practical learning advice for developers building modern applications.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://doors2ai.com/blog.html">
+  <link rel="icon" href="doors2ai_logo.png">
+  <meta property="og:title" content="AI Engineering Blog | Doors2AI">
+  <meta property="og:description" content="Doors2AI blog covering AI engineering, full stack development, and practical learning advice for developers building modern applications.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://doors2ai.com/blog.html">
+  <meta property="og:image" content="https://doors2ai.com/doors2ai_logo.png">
+  <meta name="last-modified" content="April 2026">
+  <!-- Google Analytics script will be added here -->
+  <!-- Google Search Console verification tag will be added here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .blog-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border-2);
+      border-radius: var(--r-xl);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+    }
+    .blog-card:hover {
+      border-color: var(--border);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .blog-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--r-pill);
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      background: var(--brand-light);
+      color: var(--brand-dark);
+      display: inline-flex;
+      align-self: flex-start;
+      margin-bottom: 16px;
+    }
+    .blog-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .blog-card-summary {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.68;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .blog-card-meta {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-bottom: 20px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .blog-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
+    .blog-read-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--brand);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap var(--ease), color var(--ease);
+    }
+    .blog-read-link:hover { gap: 9px; color: var(--brand-dark); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">doors<span>2</span>ai</a>
+      <div class="nav-links">
+        <a href="programs.html">Programs</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero page-hero-dark">
+    <div class="page-hero-inner">
+      <div class="section-label">Blog</div>
+      <h1>Practical articles on AI, full stack development, and <em>modern software careers.</em></h1>
+      <p>Clear, beginner-friendly articles to help learners understand modern development paths, AI engineering concepts, and the skills that matter most.</p>
+    </div>
+  </div>
+
+  <!-- ARTICLES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Articles</div>
+        <h2>Latest articles</h2>
+      </div>
+      <div class="blog-grid">
+
+        <div class="blog-card">
+          <span class="blog-tag">Career &amp; Skills</span>
+          <h3>How to Become an AI Full Stack Engineer in 2026</h3>
+          <p class="blog-card-summary">The role of the full stack developer is evolving. This article breaks down what an AI Full Stack Engineer does, how the skill set differs from traditional full stack development, and how to build toward this role in a structured way — from web fundamentals through to AI integration.</p>
+          <div class="blog-card-meta">
+            <span>April 2026</span>
+            <span class="blog-meta-dot"></span>
+            <span>7 min read</span>
+          </div>
+          <a href="blog-ai-full-stack-engineer-2026.html" class="blog-read-link">Read article →</a>
+        </div>
+
+        <div class="blog-card">
+          <span class="blog-tag">AI Development</span>
+          <h3>Why Agentic AI Will Be the Most Valuable Skill for Developers</h3>
+          <p class="blog-card-summary">Most developers who have worked with AI have sent a prompt and displayed a response. Agentic AI goes further — systems that reason, use tools, and complete multi-step tasks. This article explains what it is, why it matters, and what developers should start learning.</p>
+          <div class="blog-card-meta">
+            <span>April 2026</span>
+            <span class="blog-meta-dot"></span>
+            <span>6 min read</span>
+          </div>
+          <a href="blog-agentic-ai-developers.html" class="blog-read-link">Read article →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="section-label">Get started</div>
+      <h2>Ready to build your skills?</h2>
+      <p>Explore the doors2ai learning paths and choose a structured starting point for web development, full stack, or AI application development.</p>
+      <div class="cta-buttons">
+        <a href="programs.html" class="btn-cta-primary">Explore Programs</a>
+        <a href="contact.html" class="btn-cta-ghost">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">doors<span>2</span>ai</a>
+        <p class="footer-tagline">Structured AI and software development learning — from foundations to real applications.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="programs.html#frontend">Web Development Foundations</a>
+        <a href="programs.html#fullstack">Full Stack Development</a>
+        <a href="programs.html#agentic">AI Application Development</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="mailto:support@doors2ai.com">support@doors2ai.com</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 doors2ai. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

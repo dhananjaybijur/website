@@ -3,23 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs — doors2ai</title>
+  <title>Programs | Doors2AI Learning Paths</title>
+  <meta name="description" content="Explore Doors2AI learning paths in web development, full stack engineering, and AI applications. Structured programs designed for practical skills.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://doors2ai.com/programs.html">
+  <link rel="icon" href="doors2ai_logo.png">
+  <meta property="og:title" content="Programs | Doors2AI Learning Paths">
+  <meta property="og:description" content="Explore Doors2AI learning paths in web development, full stack engineering, and AI applications. Structured programs designed for practical skills.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://doors2ai.com/programs.html">
+  <meta property="og:image" content="https://doors2ai.com/doors2ai_logo.png">
+  <meta name="last-modified" content="April 2026">
+  <!-- Google Analytics script will be added here -->
+  <!-- Google Search Console verification tag will be added here -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .card-description { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+
+    /* ── Path 1 tab layout ───────────────────────────────────────── */
+    .p1-header { margin-bottom: 32px; }
+    .p1-path-label {
+      display: inline-block; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--track-fe-text); background: var(--track-fe-bg);
+      padding: 4px 10px; border-radius: 4px; margin-bottom: 14px;
+    }
+    .p1-title { font-size: clamp(22px, 3vw, 28px); font-weight: 700; color: var(--text); margin: 0 0 10px; }
+    .p1-desc  { font-size: 15px; color: var(--text-2); line-height: 1.65; max-width: 680px; margin: 0 0 20px; }
+    .p1-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .p1-pill {
+      font-size: 12px; font-weight: 500; padding: 3px 10px;
+      border-radius: 20px; background: #E8F6F1;
+      border: 1px solid #CFEDE3; color: #1D9E75;
+    }
+
+    .p1-tabs-wrap {
+      background: var(--bg); border: 1px solid #ECECEC;
+      border-radius: 10px; overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .p1-tabs-wrap:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transform: translateY(-2px);
+    }
+    .p1-tab-nav {
+      display: flex; border-bottom: 1px solid var(--border-2);
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .p1-tab-nav::-webkit-scrollbar { display: none; }
+    .p1-tab {
+      background: none; border: none;
+      border-bottom: 2px solid transparent;
+      padding: 14px 22px; font-size: 14px; font-weight: 600;
+      color: var(--text-2); cursor: pointer; white-space: nowrap;
+      transition: color 0.15s, border-color 0.15s;
+      margin-bottom: -1px; font-family: inherit;
+    }
+    .p1-tab:hover { color: #168764; border-bottom-color: rgba(22,135,100,0.3); }
+    .p1-tab.active { color: var(--track-fe-text); border-bottom-color: var(--track-fe-text); }
+
+    .p1-tab-content { padding: 28px 32px; min-height: 200px; background: #FAFAFA; }
+    .p1-panel { display: none; }
+    .p1-panel.active { display: block; }
+
+    .p1-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .p1-list li {
+      font-size: 14px; color: var(--text-2); line-height: 1.5;
+      padding-left: 16px; position: relative;
+    }
+    .p1-list li::before {
+      content: '•'; position: absolute; left: 0;
+      color: var(--track-fe-text); font-weight: 700;
+    }
+
+    .p1-group-label {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--text-3); margin: 0 0 10px;
+    }
+    .p1-tools-group { margin-bottom: 24px; }
+    .p1-tools-group:last-child { margin-bottom: 0; }
+
+    .p1-skills-group { margin-bottom: 22px; }
+    .p1-skills-group:last-child { margin-bottom: 0; }
+    .p1-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .p1-tag {
+      font-size: 12px; font-weight: 500; padding: 3px 8px;
+      border-radius: 4px; background: var(--track-fe-bg); color: var(--track-fe-text);
+    }
+
+    .p1-tab-footer {
+      display: flex; gap: 12px; align-items: center;
+      padding: 18px 32px; border-top: 1px solid #F0F0F0;
+      background: var(--bg-2);
+    }
+
+    .p1-btn-primary {
+      display: inline-flex; align-items: center;
+      padding: 9px 18px; border-radius: 6px;
+      background: var(--brand); color: #fff;
+      font-size: 13.5px; font-weight: 600; text-decoration: none;
+      border: 1.5px solid var(--brand);
+      transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    }
+    .p1-btn-primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; transform: translateY(-1px); }
+    .p1-btn-secondary {
+      display: inline-flex; align-items: center;
+      padding: 9px 18px; border-radius: 6px;
+      background: transparent; color: var(--text-2);
+      font-size: 13.5px; font-weight: 500; text-decoration: none;
+      border: 1.5px solid var(--border);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .p1-btn-secondary:hover { border-color: var(--brand); color: var(--brand); }
+
+    /* Reduce vertical whitespace between path sections ~25% */
+    #frontend, #fullstack, #agentic { padding-top: 60px; padding-bottom: 60px; }
+
+    @media (max-width: 600px) {
+      .p1-tab-content { padding: 20px 16px; }
+      .p1-tab-footer { padding: 14px 16px; flex-direction: column; align-items: flex-start; }
+      .p1-tab { padding: 12px 14px; font-size: 13px; }
+    }
+  </style>
 </head>
 <body>
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="logo">doors<span>2</span>ai</a>
+      <a href="/" class="logo">doors<span>2</span>ai</a>
       <div class="nav-links">
         <a href="programs.html" class="active">Programs</a>
         <a href="curriculum.html">Curriculum</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </div>
       <a href="contact.html" class="nav-cta">Apply Now</a>
@@ -31,7 +152,7 @@
     <div class="page-hero-inner">
       <div class="section-label">Programs</div>
       <h1>Choose your <em>starting point.</em></h1>
-      <p>Three structured online programs. One connected learning path. Start with the track that fits your level.</p>
+      <p>Three structured online programs. One connected learning path. Start with the path that matches your background and goals.</p>
     </div>
   </div>
 
@@ -40,13 +161,13 @@
     <div class="path-inner">
       <div class="section-head">
         <div class="section-label">Learning Path</div>
-        <h2>How the tracks connect.</h2>
-        <p>Choose your entry point based on your background and goals. Each online program is designed to stand on its own while also connecting into a longer path from frontend to full stack to AI engineering.</p>
+        <h2>How the paths connect.</h2>
+        <p>Choose based on your background and goals. Each program stands alone or connects into a complete path from web foundations to AI development.</p>
       </div>
       <div class="path-track">
         <div class="path-step track-fe">
-          <div class="path-num">Track 01</div>
-          <h3>Frontend Engineering</h3>
+          <div class="path-num">Path 1</div>
+          <h3>Web Development Foundations</h3>
           <p>Learn modern frontend fundamentals and build a portfolio-ready project. No prior experience required.</p>
           <div class="path-tech-tags">
             <span class="tech-tag">HTML</span>
@@ -56,34 +177,34 @@
             <span class="tech-tag">React</span>
             <span class="tech-tag">Next.js</span>
           </div>
-          <span class="path-badge badge-fe">8 weeks</span>
+          <span class="path-badge badge-fe">8–10 weeks</span>
         </div>
         <div class="path-step track-fs">
-          <div class="path-num">Track 02</div>
+          <div class="path-num">Path 2</div>
           <h3>Full Stack Development</h3>
-          <p>Build production-ready full-stack applications from frontend to backend, including APIs, databases, authentication, and cloud deployment.</p>
-          <div class="path-tech-tags">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">REST APIs</span>
-            <span class="tech-tag">Databases</span>
-            <span class="tech-tag">Auth</span>
-            <span class="tech-tag">Deployment</span>
-          </div>
-          <span class="path-badge badge-fs">10 weeks</span>
-        </div>
-        <div class="path-step track-ai">
-          <div class="path-num">Track 03 — Flagship</div>
-          <h3>Agentic AI Engineering</h3>
-          <p>The full AI engineering stack. Python, LLM foundations, RAG, LangChain, LangGraph, and multi-agent orchestration.</p>
+          <p>Build production-ready full-stack applications from frontend to backend, including APIs, databases, and deployment.</p>
           <div class="path-tech-tags">
             <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">Deployment</span>
+          </div>
+          <span class="path-badge badge-fs">12–14 weeks</span>
+        </div>
+        <div class="path-step track-ai">
+          <div class="path-num">Path 3</div>
+          <h3>AI Application Development</h3>
+          <p>Build AI-powered applications using Python, LLM foundations, RAG, LangChain, LangGraph, and modern AI workflows.</p>
+          <div class="path-tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LLMs</span>
             <span class="tech-tag">RAG</span>
             <span class="tech-tag">LangChain</span>
             <span class="tech-tag">LangGraph</span>
-            <span class="tech-tag">LLMs</span>
-            <span class="tech-tag">Multi-Agent</span>
+            <span class="tech-tag">AI Workflows</span>
           </div>
-          <span class="path-badge badge-ai">14 weeks</span>
+          <span class="path-badge badge-ai">16 weeks</span>
         </div>
       </div>
     </div>
@@ -92,177 +213,402 @@
   <!-- FRONTEND PROGRAM -->
   <section class="section section-alt" id="frontend">
     <div class="wrap">
-      <div class="section-head">
-        <span class="prog-badge fe" style="margin-bottom:14px;display:inline-flex">Frontend</span>
-        <h2>Frontend Engineering Bootcamp</h2>
-        <p>Start your development journey with modern frontend fundamentals and a portfolio ready project.</p>
-      </div>
-      <div class="programs-grid">
-        <div class="prog-card" style="grid-column:span 1">
-          <div class="prog-card-header">
-            <span class="prog-badge fe">Frontend</span>
-          </div>
-          <h3>What you'll build</h3>
-          <div class="prog-meta">8 weeks · Cohort-based · Beginner</div>
-          <ul class="prog-modules">
-            <li>Responsive landing page with HTML &amp; CSS</li>
-            <li>Interactive UI with JavaScript &amp; DOM</li>
-            <li>Type-safe app with TypeScript</li>
-            <li>Component library with React</li>
-            <li>Full Next.js production app (portfolio capstone)</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="curriculum.html" class="prog-cta">View curriculum →</a>
-          </div>
-        </div>
-        <div class="prog-card" style="grid-column:span 1">
-          <div class="prog-card-header">
-            <span class="prog-badge fe">Frontend</span>
-          </div>
-          <h3>What you'll learn</h3>
-          <div class="prog-meta">8 modules · 1 capstone</div>
-          <ul class="prog-modules">
-            <li>HTML &amp; CSS layouts</li>
-            <li>JavaScript fundamentals</li>
-            <li>TypeScript basics</li>
-            <li>React components</li>
-            <li>Next.js</li>
-            <li>Git workflows</li>
-          </ul>
-          <h3>Example projects you'll build</h3>
-          <p>Students apply concepts by building practical projects such as:</p>
-          <ul class="prog-modules">
-            <li>Personal portfolio website</li>
-            <li>Responsive SaaS landing page</li>
-            <li>Interactive dashboard UI</li>
-            <li>Next.js project with routing and components</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="contact.html" class="prog-cta">Apply to this track →</a>
-          </div>
+
+      <!-- Program header -->
+      <div class="p1-header">
+        <div class="p1-path-label">Path 1</div>
+        <h2 class="p1-title">Web Development Foundations</h2>
+        <p class="p1-desc">Build strong programming fundamentals and modern frontend development skills through a structured beginner-friendly cohort program focused on practical learning and career progression.</p>
+        <div class="p1-badges">
+          <span class="p1-pill">Beginner</span>
+          <span class="p1-pill">8–10 weeks</span>
+          <span class="p1-pill">Live cohort</span>
+          <span class="p1-pill">Portfolio project</span>
         </div>
       </div>
+
+      <!-- Tab area -->
+      <div class="p1-tabs-wrap">
+        <div class="p1-tab-nav" role="tablist" aria-label="Path 1 program details">
+          <button class="p1-tab active" data-tab="p1-learn"    role="tab" aria-selected="true"  aria-controls="p1-learn">Learn</button>
+          <button class="p1-tab"        data-tab="p1-projects" role="tab" aria-selected="false" aria-controls="p1-projects">Projects</button>
+          <button class="p1-tab"        data-tab="p1-tools"    role="tab" aria-selected="false" aria-controls="p1-tools">Tools</button>
+          <button class="p1-tab"        data-tab="p1-skills"   role="tab" aria-selected="false" aria-controls="p1-skills">Skills</button>
+          <button class="p1-tab"        data-tab="p1-outcomes" role="tab" aria-selected="false" aria-controls="p1-outcomes">Outcomes</button>
+        </div>
+
+        <div class="p1-tab-content">
+
+          <!-- Learn -->
+          <div class="p1-panel active" id="p1-learn" role="tabpanel">
+            <ul class="p1-list">
+              <li>How modern websites and web applications work</li>
+              <li>HTML fundamentals and page structure</li>
+              <li>CSS layouts and responsive design</li>
+              <li>JavaScript fundamentals</li>
+              <li>TypeScript basics</li>
+              <li>React fundamentals</li>
+              <li>Next.js basics</li>
+              <li>Git fundamentals</li>
+            </ul>
+          </div>
+
+          <!-- Projects -->
+          <div class="p1-panel" id="p1-projects" role="tabpanel">
+            <ul class="p1-list">
+              <li>Personal portfolio website</li>
+              <li>Responsive SaaS landing page</li>
+              <li>Interactive JavaScript mini applications</li>
+              <li>React component-based UI project</li>
+              <li>Production-ready Next.js frontend project</li>
+            </ul>
+          </div>
+
+          <!-- Tools -->
+          <div class="p1-panel" id="p1-tools" role="tabpanel">
+            <div class="p1-tools-group">
+              <h4 class="p1-group-label">Development environment</h4>
+              <ul class="p1-list">
+                <li>VS Code / Cursor</li>
+                <li>Chrome DevTools</li>
+              </ul>
+            </div>
+            <div class="p1-tools-group">
+              <h4 class="p1-group-label">Professional workflow</h4>
+              <ul class="p1-list">
+                <li>Git &amp; GitHub</li>
+                <li>Deployment platforms</li>
+                <li>Modern frontend tooling</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="p1-panel" id="p1-skills" role="tabpanel">
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Technical skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">HTML</span>
+                <span class="p1-tag">CSS</span>
+                <span class="p1-tag">JavaScript</span>
+                <span class="p1-tag">TypeScript</span>
+                <span class="p1-tag">React</span>
+                <span class="p1-tag">Next.js</span>
+                <span class="p1-tag">Git</span>
+                <span class="p1-tag">Responsive Design</span>
+              </div>
+            </div>
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Professional skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">Debugging</span>
+                <span class="p1-tag">Problem Solving</span>
+                <span class="p1-tag">Code Organization</span>
+                <span class="p1-tag">Documentation Reading</span>
+              </div>
+            </div>
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Career skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">Portfolio Development</span>
+                <span class="p1-tag">GitHub Projects</span>
+                <span class="p1-tag">Developer Workflow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outcomes -->
+          <div class="p1-panel" id="p1-outcomes" role="tabpanel">
+            <ul class="p1-list">
+              <li>Build modern frontend applications</li>
+              <li>Create portfolio-ready projects</li>
+              <li>Deploy frontend applications</li>
+              <li>Understand professional developer workflows</li>
+              <li>Prepare for full stack development</li>
+            </ul>
+          </div>
+
+        </div><!-- /p1-tab-content -->
+
+        <div class="p1-tab-footer">
+          <a href="contact.html" class="p1-btn-primary">Apply to this path</a>
+          <a href="curriculum.html" class="p1-btn-secondary">View curriculum</a>
+        </div>
+      </div><!-- /p1-tabs-wrap -->
+
     </div>
   </section>
 
   <!-- FULL STACK PROGRAM -->
   <section class="section" id="fullstack">
     <div class="wrap">
-      <div class="section-head">
-        <span class="prog-badge fs" style="margin-bottom:14px;display:inline-flex">Full Stack</span>
-        <h2>Full Stack Development Bootcamp</h2>
-        <p>Learn how applications work end to end including backend services, APIs, databases and deployment.</p>
-      </div>
-      <div class="programs-grid">
-        <div class="prog-card">
-          <div class="prog-card-header">
-            <span class="prog-badge fs">Full Stack</span>
-          </div>
-          <h3>What you'll build</h3>
-          <div class="prog-meta">10 weeks · Cohort-based · Intermediate</div>
-          <ul class="prog-modules">
-            <li>REST API with Node.js &amp; Express</li>
-            <li>Authenticated full-stack app</li>
-            <li>Database-backed application with SQL</li>
-            <li>Full stack capstone — design to deployment</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="curriculum.html" class="prog-cta">View curriculum →</a>
-          </div>
-        </div>
-        <div class="prog-card">
-          <div class="prog-card-header">
-            <span class="prog-badge fs">Full Stack</span>
-          </div>
-          <h3>What you'll learn</h3>
-          <div class="prog-meta">10 modules · 1 capstone</div>
-          <ul class="prog-modules">
-            <li>Node.js backend</li>
-            <li>REST APIs</li>
-            <li>Authentication basics</li>
-            <li>SQL databases</li>
-            <li>Deployment</li>
-            <li>Capstone project</li>
-          </ul>
-          <h3>Example projects you'll build</h3>
-          <p>Students apply concepts by building complete applications such as:</p>
-          <ul class="prog-modules">
-            <li>Full stack task manager app</li>
-            <li>Authentication enabled web application</li>
-            <li>REST API with database integration</li>
-            <li>Deployed full stack web app</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="contact.html" class="prog-cta">Apply to this track →</a>
-          </div>
+
+      <!-- Program header -->
+      <div class="p1-header">
+        <div class="p1-path-label" style="color: var(--track-fs-text); background: var(--track-fs-bg);">Path 2</div>
+        <h2 class="p1-title">Full Stack Development</h2>
+        <p class="p1-desc">Build complete production-ready web applications using modern frontend and backend technologies. Learn how real software systems are designed, built, and deployed.</p>
+        <p class="p1-desc" style="font-size:13px;margin-top:-10px;opacity:0.8">Recommended after completing Path 1 or equivalent frontend experience.</p>
+        <div class="p1-badges">
+          <span class="p1-pill">Beginner to Intermediate</span>
+          <span class="p1-pill">12–14 weeks</span>
+          <span class="p1-pill">Live cohort</span>
+          <span class="p1-pill">Capstone project</span>
         </div>
       </div>
+
+      <!-- Tab area -->
+      <div class="p1-tabs-wrap">
+        <div class="p1-tab-nav" role="tablist" aria-label="Path 2 program details">
+          <button class="p1-tab active" data-tab="p2-learn"    role="tab" aria-selected="true"  aria-controls="p2-learn">Learn</button>
+          <button class="p1-tab"        data-tab="p2-projects" role="tab" aria-selected="false" aria-controls="p2-projects">Projects</button>
+          <button class="p1-tab"        data-tab="p2-tools"    role="tab" aria-selected="false" aria-controls="p2-tools">Tools</button>
+          <button class="p1-tab"        data-tab="p2-skills"   role="tab" aria-selected="false" aria-controls="p2-skills">Skills</button>
+          <button class="p1-tab"        data-tab="p2-outcomes" role="tab" aria-selected="false" aria-controls="p2-outcomes">Outcomes</button>
+        </div>
+
+        <div class="p1-tab-content">
+
+          <!-- Learn -->
+          <div class="p1-panel active" id="p2-learn" role="tabpanel">
+            <ul class="p1-list">
+              <li>Advanced JavaScript concepts</li>
+              <li>TypeScript for scalable applications</li>
+              <li>React component architecture</li>
+              <li>Next.js full stack features</li>
+              <li>REST API development with FastAPI</li>
+              <li>PostgreSQL fundamentals</li>
+              <li>Backend architecture basics</li>
+              <li>Deployment fundamentals</li>
+            </ul>
+          </div>
+
+          <!-- Projects -->
+          <div class="p1-panel" id="p2-projects" role="tabpanel">
+            <ul class="p1-list">
+              <li>Full stack SaaS style application</li>
+              <li>REST API with FastAPI and PostgreSQL</li>
+              <li>React and API integration project</li>
+              <li>Production-style dashboard application</li>
+              <li>Capstone full stack project</li>
+            </ul>
+          </div>
+
+          <!-- Tools -->
+          <div class="p1-panel" id="p2-tools" role="tabpanel">
+            <div class="p1-tools-group">
+              <h4 class="p1-group-label">Development environment</h4>
+              <ul class="p1-list">
+                <li>VS Code / Cursor</li>
+                <li>Chrome DevTools</li>
+                <li>Postman / API testing tools</li>
+              </ul>
+            </div>
+            <div class="p1-tools-group">
+              <h4 class="p1-group-label">Professional workflow</h4>
+              <ul class="p1-list">
+                <li>Git &amp; GitHub workflows</li>
+                <li>Database tools</li>
+                <li>Deployment platforms</li>
+                <li>Debugging workflows</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="p1-panel" id="p2-skills" role="tabpanel">
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Technical skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">React</span>
+                <span class="p1-tag">Next.js</span>
+                <span class="p1-tag">TypeScript</span>
+                <span class="p1-tag">FastAPI</span>
+                <span class="p1-tag">PostgreSQL</span>
+                <span class="p1-tag">REST APIs</span>
+                <span class="p1-tag">Full Stack Architecture</span>
+              </div>
+            </div>
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Professional skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">Debugging</span>
+                <span class="p1-tag">System Thinking</span>
+                <span class="p1-tag">Code Organization</span>
+                <span class="p1-tag">Documentation Reading</span>
+              </div>
+            </div>
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Career skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">Portfolio Development</span>
+                <span class="p1-tag">GitHub Projects</span>
+                <span class="p1-tag">Deployment Workflow</span>
+                <span class="p1-tag">Full Stack Project Experience</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outcomes -->
+          <div class="p1-panel" id="p2-outcomes" role="tabpanel">
+            <ul class="p1-list">
+              <li>Build complete full stack applications</li>
+              <li>Connect frontend and backend systems</li>
+              <li>Design simple production architectures</li>
+              <li>Deploy working web applications</li>
+              <li>Prepare for AI development path</li>
+            </ul>
+          </div>
+
+        </div><!-- /p1-tab-content -->
+
+        <div class="p1-tab-footer">
+          <a href="contact.html" class="p1-btn-primary">Apply to this path</a>
+          <a href="curriculum.html" class="p1-btn-secondary">View curriculum</a>
+        </div>
+      </div><!-- /p1-tabs-wrap -->
+
     </div>
   </section>
 
   <!-- AGENTIC AI PROGRAM -->
   <section class="section section-alt" id="agentic">
     <div class="wrap">
-      <div class="section-head">
-        <span class="prog-badge ai" style="margin-bottom:14px;display:inline-flex">Agentic AI</span>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <h2 style="margin-bottom:0">Agentic AI Engineering Bootcamp</h2>
-          <span class="prog-flagship">Flagship Program</span>
-        </div>
-        <p>Learn modern AI engineering including Python, LLM foundations, RAG, LangChain, LangGraph and multi-agent system design.</p>
-      </div>
-      <div class="programs-grid">
-        <div class="prog-card featured">
-          <div class="prog-card-header">
-            <span class="prog-badge ai">Agentic AI</span>
-            <span class="prog-flagship">Flagship Program</span>
-          </div>
-          <h3>What you'll build</h3>
-          <div class="prog-meta">14 weeks · Cohort-based · Beginner to Advanced</div>
-          <ul class="prog-modules">
-            <li>Python command-line AI tools</li>
-            <li>Prompt-engineered LLM applications</li>
-            <li>Semantic search with embeddings</li>
-            <li>Full RAG pipeline with vector database</li>
-            <li>LangGraph-orchestrated agentic workflows</li>
-            <li>Multi-agent system</li>
-            <li>Enterprise capstone — graded delivery</li>
-          </ul>
-          <p>Students design a complete system combining multiple concepts learned during the program.</p>
-          <div class="prog-footer">
-            <a href="curriculum.html" class="prog-cta">View full curriculum →</a>
-          </div>
-        </div>
-        <div class="prog-card featured">
-          <div class="prog-card-header">
-            <span class="prog-badge ai">Agentic AI</span>
-          </div>
-          <h3>What you'll learn (12 modules)</h3>
-          <div class="prog-meta">Python → LLM Foundations → RAG → LangChain → LangGraph → Multi-Agent</div>
-          <ul class="prog-modules">
-            <li>Python for AI</li>
-            <li>LLM fundamentals</li>
-            <li>Embeddings</li>
-            <li>RAG systems</li>
-            <li>LangChain</li>
-            <li>LangGraph</li>
-            <li>Multi-agent design</li>
-            <li>AI production considerations</li>
-          </ul>
-          <h3>Example AI systems you'll build</h3>
-          <p>Students build practical AI applications such as:</p>
-          <ul class="prog-modules">
-            <li>LLM powered research assistant</li>
-            <li>RAG knowledge chatbot</li>
-            <li>LangGraph workflow automation</li>
-            <li>Multi-agent task coordinator</li>
-            <li>AI document analysis tool</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="contact.html" class="prog-cta">Apply to flagship →</a>
-          </div>
+
+      <!-- Program header -->
+      <div class="p1-header">
+        <div class="p1-path-label" style="color: var(--track-ai-text); background: var(--track-ai-bg);">Path 3</div>
+        <h2 class="p1-title">AI Application Development</h2>
+        <p class="p1-desc">Learn how to build modern AI-powered applications using Python, LLMs, RAG systems, and AI workflows. Focus on practical AI engineering skills.</p>
+        <p class="p1-desc" style="font-size:13px;margin-top:-10px;opacity:0.8">Recommended after completing Path 2 or equivalent programming experience.</p>
+        <div class="p1-badges">
+          <span class="p1-pill">Intermediate</span>
+          <span class="p1-pill">16 weeks</span>
+          <span class="p1-pill">Live cohort</span>
+          <span class="p1-pill">AI capstone project</span>
         </div>
       </div>
+
+      <!-- Tab area -->
+      <div class="p1-tabs-wrap">
+        <div class="p1-tab-nav" role="tablist" aria-label="Path 3 program details">
+          <button class="p1-tab active" data-tab="p3-learn"    role="tab" aria-selected="true"  aria-controls="p3-learn">Learn</button>
+          <button class="p1-tab"        data-tab="p3-projects" role="tab" aria-selected="false" aria-controls="p3-projects">Projects</button>
+          <button class="p1-tab"        data-tab="p3-tools"    role="tab" aria-selected="false" aria-controls="p3-tools">Tools</button>
+          <button class="p1-tab"        data-tab="p3-skills"   role="tab" aria-selected="false" aria-controls="p3-skills">Skills</button>
+          <button class="p1-tab"        data-tab="p3-outcomes" role="tab" aria-selected="false" aria-controls="p3-outcomes">Outcomes</button>
+        </div>
+
+        <div class="p1-tab-content">
+
+          <!-- Learn -->
+          <div class="p1-panel active" id="p3-learn" role="tabpanel">
+            <ul class="p1-list">
+              <li>Python for AI development</li>
+              <li>LLM fundamentals</li>
+              <li>Prompt engineering basics</li>
+              <li>Retrieval Augmented Generation (RAG)</li>
+              <li>LangChain fundamentals</li>
+              <li>LangGraph basics</li>
+              <li>AI agent workflows</li>
+              <li>AI application architecture</li>
+            </ul>
+          </div>
+
+          <!-- Projects -->
+          <div class="p1-panel" id="p3-projects" role="tabpanel">
+            <ul class="p1-list">
+              <li>AI chatbot application</li>
+              <li>RAG document assistant</li>
+              <li>Multi-agent workflow project</li>
+              <li>AI powered web assistant</li>
+              <li>Production AI capstone project</li>
+            </ul>
+          </div>
+
+          <!-- Tools -->
+          <div class="p1-panel" id="p3-tools" role="tabpanel">
+            <div class="p1-tools-group">
+              <h4 class="p1-group-label">Development environment</h4>
+              <ul class="p1-list">
+                <li>VS Code / Cursor</li>
+                <li>Python environment setup</li>
+                <li>Jupyter notebooks</li>
+              </ul>
+            </div>
+            <div class="p1-tools-group">
+              <h4 class="p1-group-label">Professional workflow</h4>
+              <ul class="p1-list">
+                <li>Git &amp; GitHub</li>
+                <li>Vector databases</li>
+                <li>API integrations</li>
+                <li>Deployment basics</li>
+              </ul>
+            </div>
+            <div class="p1-tools-group">
+              <h4 class="p1-group-label">AI tools</h4>
+              <ul class="p1-list">
+                <li>OpenAI APIs</li>
+                <li>LangChain</li>
+                <li>LangGraph</li>
+                <li>Vector databases</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="p1-panel" id="p3-skills" role="tabpanel">
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Technical skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">Python</span>
+                <span class="p1-tag">LLM Integration</span>
+                <span class="p1-tag">RAG Systems</span>
+                <span class="p1-tag">LangChain</span>
+                <span class="p1-tag">LangGraph</span>
+                <span class="p1-tag">Prompt Engineering</span>
+                <span class="p1-tag">AI APIs</span>
+              </div>
+            </div>
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Professional skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">AI Debugging</span>
+                <span class="p1-tag">Problem Solving</span>
+                <span class="p1-tag">Workflow Design</span>
+                <span class="p1-tag">Documentation Reading</span>
+              </div>
+            </div>
+            <div class="p1-skills-group">
+              <h4 class="p1-group-label">Career skills</h4>
+              <div class="p1-tags">
+                <span class="p1-tag">AI Portfolio Projects</span>
+                <span class="p1-tag">AI Application Architecture</span>
+                <span class="p1-tag">GitHub AI Projects</span>
+                <span class="p1-tag">AI Engineering Foundations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outcomes -->
+          <div class="p1-panel" id="p3-outcomes" role="tabpanel">
+            <ul class="p1-list">
+              <li>Build AI powered applications</li>
+              <li>Create RAG based assistants</li>
+              <li>Develop agent workflows</li>
+              <li>Integrate LLM APIs safely</li>
+              <li>Prepare for AI engineering roles</li>
+            </ul>
+          </div>
+
+        </div><!-- /p1-tab-content -->
+
+        <div class="p1-tab-footer">
+          <a href="contact.html" class="p1-btn-primary">Apply to this path</a>
+          <a href="curriculum.html" class="p1-btn-secondary">View curriculum</a>
+        </div>
+      </div><!-- /p1-tabs-wrap -->
+
     </div>
   </section>
 
@@ -270,7 +616,7 @@
   <section class="cta-section">
     <div class="cta-inner">
       <div class="section-label">Apply</div>
-      <h2>Not sure which track to start with?</h2>
+      <h2>Not sure which path to start with?</h2>
       <p>Tell us your background and we will help you choose the right learning path.</p>
       <div class="cta-buttons">
         <a href="contact.html" class="btn-cta-primary">Apply Now</a>
@@ -284,20 +630,21 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="footer-logo">doors<span>2</span>ai</a>
-        <p class="footer-tagline">Structured AI engineering education — beginner to production-ready.</p>
+        <p class="footer-tagline">Structured AI and software development learning — from foundations to real applications.</p>
       </div>
       <div class="footer-col">
         <h4>Programs</h4>
-        <a href="programs.html#frontend">Frontend Engineering</a>
+        <a href="programs.html#frontend">Web Development Foundations</a>
         <a href="programs.html#fullstack">Full Stack Development</a>
-        <a href="programs.html#agentic">Agentic AI Engineering</a>
+        <a href="programs.html#agentic">AI Application Development</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <a href="about.html">About</a>
         <a href="curriculum.html">Curriculum</a>
         <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Apply</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
       </div>
       <div class="footer-col">
         <h4>Support</h4>
@@ -307,13 +654,31 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 doors2ai · Toronto, Canada. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-      </div>
+      <p class="footer-copy">© 2026 doors2ai. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      document.querySelectorAll('.p1-tabs-wrap').forEach(function (wrap) {
+        var tabs   = wrap.querySelectorAll('.p1-tab');
+        var panels = wrap.querySelectorAll('.p1-panel');
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            tabs.forEach(function (t) {
+              t.classList.remove('active');
+              t.setAttribute('aria-selected', 'false');
+            });
+            panels.forEach(function (p) { p.classList.remove('active'); });
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            var panel = document.getElementById(tab.dataset.tab);
+            if (panel) panel.classList.add('active');
+          });
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
