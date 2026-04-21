@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260412">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -56,84 +56,75 @@
       <h2>Program Enquiry</h2>
       <p>Share a few details so we can understand your background and recommend the right starting path.</p>
 
-      <!--<form class="contact-form" action="https://api.web3forms.com/submit" method="post"> -->
-        <form class="contact-form" id="contact-form">
-        <!-- below lines commented   
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+
         <input type="hidden" name="access_key" value="cd1f7834-74c7-42f7-b521-07e17910988d">
         <input type="hidden" name="subject" value="New Application — doors2ai">
         <input type="hidden" name="from_name" value="doors2ai Website">
-        <input type="hidden" name="redirect" value="https://doors2ai.com/thankyou.html">
+        <input type="hidden" name="autoresponder" value="true">
+        <input type="hidden" name="redirect" value="thankyou.html">
         <input type="checkbox" name="botcheck" style="display:none">
-        -->
 
         <div class="form-row">
           <div class="form-group">
             <label for="first-name">First name *</label>
-            <input type="text" id="first-name" name="First Name" required placeholder="John">
+            <input type="text" id="first-name" name="first_name" required placeholder="Jane">
           </div>
           <div class="form-group">
             <label for="last-name">Last name *</label>
-            <input type="text" id="last-name" name="Last Name" required placeholder="Smith">
+            <input type="text" id="last-name" name="last_name" required placeholder="Smith">
           </div>
         </div>
 
         <div class="form-group">
           <label for="email">Email address *</label>
-          <input type="email" id="email" name="Email Address" required placeholder="Primary contact email.">
+          <input type="email" id="email" name="email" required placeholder="Primary contact email.">
         </div>
 
         <div class="form-group">
           <label for="phone">Phone number (optional)</label>
-          <input type="tel" id="phone" name="Phone Number" placeholder="+1 (416) 555-0100">
+          <input type="tel" id="phone" name="phone" placeholder="+1 (416) 555-0100">
         </div>
 
         <div class="form-group">
           <label for="program">Which path interests you most? *</label>
-          <select id="program" name="Program Interest" required>
+          <select id="program" name="program" required>
             <option value="" disabled selected>Select a program</option>
-            <option value="Path 3 — AI Application Development (16 weeks)">
-  Path 3 — AI Application Development (16 weeks)
-        </option>
-        <option value="Path 2 — Full Stack Development (12–14 weeks)">
-          Path 2 — Full Stack Development (12–14 weeks)
-        </option>
-        <option value="Path 1 — Web Development Foundations (8–10 weeks)">
-          Path 1 — Web Development Foundations (8–10 weeks)
-        </option>
-        <option value="Not sure yet — I'd like guidance">
-          Not sure yet — I'd like guidance
-        </option>
+            <option value="path3">Path 3 — AI Application Development (16 weeks)</option>
+            <option value="path2">Path 2 — Full Stack Development (12–14 weeks)</option>
+            <option value="path1">Path 1 — Web Development Foundations (8–10 weeks)</option>
+            <option value="unsure">Not sure yet — I'd like guidance</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="background">Describe your experience with programming or technology. *</label>
-          <select id="background" name="Background" required>
+          <select id="background" name="background" required>
             <option value="" disabled selected>Select your background</option>
-            <option value="No coding experience">No coding experience</option>
-            <option value="Some coding (self-taught / tutorials)">Some coding (self-taught / tutorials)</option>
-            <option value="Frontend developer">Frontend developer</option>
-            <option value="Backend / full stack developer">Backend / full stack developer</option>
-            <option value="Data analyst / scientist">Data analyst / scientist</option>
-            <option value="Other technical role">Other technical role</option>
-            <option value="Non-technical professional">Non-technical professional</option>
+            <option value="no-coding">No coding experience</option>
+            <option value="some-coding">Some coding (self-taught / tutorials)</option>
+            <option value="frontend-dev">Frontend developer</option>
+            <option value="backend-dev">Backend / full stack developer</option>
+            <option value="data-analyst">Data analyst / scientist</option>
+            <option value="other-tech">Other technical role</option>
+            <option value="non-tech">Non-technical professional</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="goals">What are you hoping to achieve? *</label>
-          <textarea id="goals" name="Goals" required placeholder="What do you hope to achieve from this program?"></textarea>
+          <textarea id="goals" name="goals" required placeholder="What do you hope to achieve from this program?"></textarea>
         </div>
 
         <div class="form-group">
           <label for="heard">How did you hear about doors2ai?</label>
-          <select id="heard" name="How did you hear about us?">
+          <select id="heard" name="heard">
             <option value="" disabled selected>Select an option</option>
-            <option value="LinkedIn">LinkedIn</option>
-            <option value="Google search">Google search</option>
-            <option value="Referral from someone I know">Referral from someone I know</option>
-            <option value="Social media">Social media</option>
-            <option value="Other">Other</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="google">Google search</option>
+            <option value="referral">Referral from someone I know</option>
+            <option value="social">Social media</option>
+            <option value="other">Other</option>
           </select>
         </div>
 
@@ -242,50 +233,7 @@
       <p class="footer-copy">© 2026 doors2ai. All rights reserved.</p>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-  (function(){
-    emailjs.init("-SDhu1BjPT5NTs7Fw");
-  })();
-</script>
-<script>
-  const contactForm = document.getElementById("contact-form");
 
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalButtonText = submitButton.textContent;
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
-
-    const templateParams = {
-      from_name:
-        document.getElementById("first-name").value.trim() +
-        " " +
-        document.getElementById("last-name").value.trim(),
-      from_email: document.getElementById("email").value.trim(),
-      subject: "New Application — doors2ai",
-      message:
-        "Phone Number: " + (document.getElementById("phone").value.trim() || "Not provided") + "\n\n" +
-        "Program Interest: " + document.getElementById("program").value + "\n\n" +
-        "Background: " + document.getElementById("background").value + "\n\n" +
-        "Goals: " + document.getElementById("goals").value.trim() + "\n\n" +
-        "How did you hear about us?: " + (document.getElementById("heard").value || "Not provided")
-    };
-
-    emailjs.send("service_2wq52lv", "template_pcoe5y5", templateParams)
-      .then(function () {
-        window.location.href = "https://doors2ai.com/thankyou.html";
-      })
-      .catch(function (error) {
-        alert("Sorry, something went wrong. Please try again.");
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-        console.error("EmailJS error:", error);
-      });
-  });
-</script>
-<script src="nav.js"></script>
+  <script src="nav.js"></script>
 </body>
 </html>

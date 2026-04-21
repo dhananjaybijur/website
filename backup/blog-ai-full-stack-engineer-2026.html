@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Become an AI Full Stack Engineer in 2026 — doors2ai</title>
+  <meta name="description" content="Learn what an AI Full Stack Engineer does in 2026, what skills matter most, and how beginners can build a structured learning roadmap.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .article-back-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 44px var(--pad) 0;
+    }
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-2);
+      transition: color var(--ease);
+    }
+    .article-back:hover { color: var(--brand); }
+    .article-page-hero {
+      padding: 48px var(--pad) 56px;
+      border-bottom: 1px solid var(--border-3);
+      background: var(--bg-2);
+    }
+    .article-page-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .article-tag {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--r-pill);
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      background: var(--brand-light);
+      color: var(--brand-dark);
+      display: inline-flex;
+      margin-bottom: 18px;
+    }
+    .article-page-hero h1 {
+      font-size: clamp(26px, 3.8vw, 38px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--text);
+      line-height: 1.18;
+      margin-bottom: 18px;
+      max-width: 680px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--text-3);
+    }
+    .article-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); display: inline-block; }
+    .article-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px var(--pad) 80px;
+    }
+    .article-body h2 {
+      font-size: clamp(19px, 2.3vw, 23px);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.4px;
+      margin: 52px 0 16px;
+      line-height: 1.25;
+    }
+    .article-body h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 32px 0 10px;
+      letter-spacing: -0.2px;
+    }
+    .article-body p {
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.78;
+      margin-bottom: 20px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 0 0 20px 22px;
+    }
+    .article-body li {
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body a { color: var(--brand); }
+    .article-body a:hover { text-decoration: underline; }
+    .article-body h2:first-child { margin-top: 0; }
+    .article-cta-box {
+      background: var(--brand-bg);
+      border: 1px solid rgba(29,158,117,0.22);
+      border-radius: var(--r-xl);
+      padding: 30px 32px;
+      margin: 52px 0 0;
+    }
+    .article-cta-box p {
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: var(--text-2);
+      line-height: 1.65;
+    }
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--border-3);
+      margin: 52px 0;
+    }
+    @media (max-width: 680px) {
+      .article-back-wrap { padding-top: 28px; }
+      .article-page-hero { padding: 32px var(--pad) 40px; }
+      .article-cta-box { padding: 24px 20px; }
+    }
+    .cta-button {
+      background-color: var(--brand);
+      color: #ffffff;
+      padding: 12px 22px;
+      border-radius: var(--r-md);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color var(--ease);
+    }
+    /* Override .article-body a specificity so text stays white */
+    .article-body a.cta-button { color: #ffffff; }
+    .cta-button:hover { background-color: var(--brand-dark); color: #ffffff; }
+    .article-body a.cta-button:hover { color: #ffffff; }
+    .cta-button.secondary {
+      background-color: transparent;
+      color: var(--brand);
+      border: 2px solid var(--brand);
+    }
+    .article-body a.cta-button.secondary { color: var(--brand); }
+    .cta-button.secondary:hover { background-color: var(--brand); color: #ffffff; }
+    .article-body a.cta-button.secondary:hover { color: #ffffff; }
+    .cta-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    @media (max-width: 500px) {
+      .cta-container { flex-direction: column; }
+      .cta-button, .cta-button.secondary { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">doors<span class="brand-accent">2</span>ai</a>
+      <div class="nav-links">
+        <a href="programs.html">Programs</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- BACK LINK -->
+  <div class="article-back-wrap">
+    <a href="blog.html" class="article-back">← Back to Blog</a>
+  </div>
+
+  <!-- ARTICLE HERO -->
+  <div class="article-page-hero">
+    <div class="article-page-hero-inner">
+      <span class="article-tag">Career &amp; Skills</span>
+      <h1>How to Become an AI Full Stack Engineer in 2026</h1>
+      <div class="article-meta">
+        <span>doors<span class="brand-accent">2</span>ai Team</span>
+        <span class="article-meta-dot"></span>
+        <span>April 2026</span>
+        <span class="article-meta-dot"></span>
+        <span>7 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <div class="article-body">
+
+    <p>Software development is changing faster than it has in years. The rise of large language models and accessible AI APIs has shifted what is expected of developers across the stack. You no longer need to choose between being a developer and working with AI — the two are converging into a new kind of role: the AI Full Stack Engineer.</p>
+
+    <p>This article breaks down what that role looks like, what skills you need, and how to build toward it from the ground up.</p>
+
+    <h2>What is an AI Full Stack Engineer?</h2>
+
+    <p>An AI Full Stack Engineer is a developer who can build complete applications from frontend to backend while also integrating AI capabilities into those applications. This might include calling language model APIs, building semantic search features, or constructing multi-step AI workflows.</p>
+
+    <p>This is not a brand-new job title you will find on every job board. It is more of a description of where general software development is heading. Companies building modern products increasingly need developers who understand not just the web stack, but also how to work with AI tools in a practical, production-aware way.</p>
+
+    <h2>How this role differs from a traditional full stack developer</h2>
+
+    <p>A traditional full stack developer works with a frontend framework, a backend language and framework, a database, APIs, and deployment basics. These remain the foundation of the role.</p>
+
+    <p>An AI Full Stack Engineer does all of that, and also knows how to:</p>
+
+    <ul>
+      <li>Call and work with LLM APIs (OpenAI, Anthropic, Google Gemini)</li>
+      <li>Write effective prompts and manage prompt templates</li>
+      <li>Implement retrieval-augmented generation (RAG) for document-aware features</li>
+      <li>Build AI-powered workflows using tools like LangChain or LangGraph</li>
+      <li>Think about how AI outputs fit into application logic and user experience</li>
+    </ul>
+
+    <p>The additional layer is not entirely separate from full stack work — it sits on top of it. Which is why having a strong foundation first matters so much.</p>
+
+    <h2>Core skills you will need</h2>
+
+    <h3>Frontend</h3>
+    <p>You do not need to be a design expert. You need to understand HTML, CSS, and JavaScript well enough to build functional interfaces. React and Next.js are the most practical choices right now for modern frontend work.</p>
+
+    <h3>Backend</h3>
+    <p>Python is the dominant language in AI tooling, so learning Python for backend development makes practical sense. FastAPI is a modern, lightweight framework that is well-suited for building APIs that connect your frontend to AI services.</p>
+
+    <h3>Databases</h3>
+    <p>Relational databases — particularly PostgreSQL — are still the foundation of most production applications. You need to know how to store, query, and manage application data. You will also encounter vector databases as part of RAG implementations, but SQL fundamentals come first.</p>
+
+    <h3>APIs</h3>
+    <p>Working with APIs is central to both full stack and AI development. You will call AI APIs, build your own APIs, and connect services together. Understanding HTTP, request-response cycles, and authentication is essential.</p>
+
+    <h3>LLM basics and prompting</h3>
+    <p>You do not need to know how to train a language model. What you need is to understand how to use them — how to write prompts, structure requests, interpret responses, and handle errors gracefully. Writing good prompts is a practical skill that improves with deliberate practice.</p>
+
+    <h3>RAG basics</h3>
+    <p>Retrieval-augmented generation is a technique that allows language models to answer questions based on specific documents or data sources rather than relying entirely on their training data. If you are building any kind of document-aware feature, understanding RAG is valuable.</p>
+
+    <h3>AI application workflows</h3>
+    <p>Tools like LangChain and LangGraph help developers build structured AI workflows and multi-step processes. These are becoming standard in production AI applications and are worth understanding early.</p>
+
+    <h2>A suggested learning roadmap</h2>
+
+    <p>If you are starting from close to zero, do not try to learn everything at once. Here is a sensible progression:</p>
+
+    <ol>
+      <li><strong>Web foundations</strong> — HTML, CSS, JavaScript, basic responsive design. Build simple interactive pages.</li>
+      <li><strong>Modern frontend</strong> — React fundamentals, Next.js, component structure. Build a small project you can show.</li>
+      <li><strong>Backend development</strong> — Python, FastAPI, REST APIs, basic authentication. Build and expose your own API endpoints.</li>
+      <li><strong>Database integration</strong> — PostgreSQL, basic SQL, connecting a database to your backend application.</li>
+      <li><strong>AI integration</strong> — Call the OpenAI or Anthropic API from your backend. Build a feature that uses an LLM — a chatbot, a summariser, a classifier.</li>
+      <li><strong>RAG and workflows</strong> — Build a retrieval pipeline. Use LangChain or LangGraph to construct a multi-step AI workflow.</li>
+    </ol>
+
+    <p>Each stage builds on the one before it. Skipping ahead tends to make later steps harder, not easier.</p>
+
+    <h2>Common mistakes beginners make</h2>
+
+    <h3>Skipping the fundamentals</h3>
+    <p>It is tempting to jump straight to AI because it feels more exciting. But without a solid grasp of how backends, APIs, and databases work, integrating AI into a real application becomes much harder. The fundamentals create the foundation everything else sits on.</p>
+
+    <h3>Treating prompts as magic</h3>
+    <p>Some beginners believe that writing better prompts is all it takes. In practice, building reliable AI features requires thinking about error handling, fallback logic, output parsing, and user experience — not just the prompt itself.</p>
+
+    <h3>Not building anything</h3>
+    <p>Reading about AI development and actually building with it are very different experiences. Projects force you to face real problems and work through them. No amount of reading substitutes for building something.</p>
+
+    <h3>Underestimating deployment</h3>
+    <p>Getting something running locally is not the same as getting it running reliably in production. Understanding even the basics of cloud deployment, environment variables, and API key security matters more than many beginners expect.</p>
+
+    <h2>Practical projects to build</h2>
+
+    <p>These do not need to be complex. The goal is to combine different parts of the stack in a single project:</p>
+
+    <ul>
+      <li>A portfolio site with a Next.js frontend and a FastAPI backend</li>
+      <li>A simple task manager with user authentication and PostgreSQL</li>
+      <li>An AI chatbot powered by the OpenAI API with a basic chat interface</li>
+      <li>A document question-answering tool using RAG and a vector store</li>
+      <li>A multi-step workflow using LangGraph that processes user input and produces structured output</li>
+    </ul>
+
+    <h2>Final thoughts</h2>
+
+    <p>The AI Full Stack Engineer is not a distant, specialised role reserved for researchers or senior engineers. It is a practical skill set that developers at any level can start building toward today. The stack is accessible, the tools are well-documented, and the projects you can build along the way are genuinely interesting.</p>
+
+    <p>The key is to build in order — frontend, backend, databases, APIs, then AI. Each layer makes the next one more understandable.</p>
+
+    <hr class="article-divider">
+
+    <div class="article-cta-box">
+      <p>If you want a structured, project-based path into full stack and AI application development, the doors2ai <a href="programs.html">learning paths</a> are designed to take you from foundations through to building real AI-powered applications — with live instruction and guided projects at every stage.</p>
+      <div class="cta-container">
+        <a href="programs.html" class="cta-button">Build Real AI Projects — See the Curriculum</a>
+        <a href="contact.html" class="cta-button secondary">Join the Beta Cohort</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">doors<span class="brand-accent">2</span>ai</a>
+        <p class="footer-tagline">Structured AI and software development learning — from foundations to real applications.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="programs.html#frontend">Web Development Foundations</a>
+        <a href="programs.html#fullstack">Full Stack Development</a>
+        <a href="programs.html#agentic">AI Application Development</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="mailto:support@doors2ai.com">support@doors2ai.com</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 doors2ai. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

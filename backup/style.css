@@ -353,18 +353,13 @@ ul { list-style: none; }
 
 /* Beta Cohort CTA pill in hero */
 /* Beta Cohort ghost button — secondary CTA below main row */
-.hero-beta-cta,
-.hero-beta-cta:link,
-.hero-beta-cta:visited,
-.hero-beta-cta:hover,
-.hero-beta-cta:active {
+.hero-beta-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 13.5px;
   font-weight: 600;
-  color: rgba(255,255,255,0.9) !important;
-  text-decoration: none !important;
+  color: rgba(255,255,255,0.9);
   border: 1.5px solid rgba(255,255,255,0.3);
   background: transparent;
   padding: 10px 20px;
@@ -372,13 +367,12 @@ ul { list-style: none; }
   margin-top: 12px;
   transition: color var(--ease), border-color var(--ease), background var(--ease);
 }
-
-.hero-beta-cta:hover,
-.hero-beta-cta:active {
-  color: #fff !important;
+.hero-beta-cta:hover {
+  color: #fff;
   border-color: rgba(255,255,255,0.55);
   background: rgba(255,255,255,0.06);
 }
+
 /* ============================================================
    HERO CURRICULUM PANEL — right column visual
    Research-backed: shows the product (paths + stack + outcomes)
