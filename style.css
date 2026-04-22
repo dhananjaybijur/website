@@ -262,7 +262,7 @@ ul { list-style: none; }
 .hero-sub {
   font-size: 18px;
   font-weight: 400;
-  color: var(--text-2);
+  color: #cfeee4;
   line-height: 1.6;
   max-width: 520px;
   margin-bottom: 32px;
@@ -370,6 +370,7 @@ ul { list-style: none; }
   padding: 10px 20px;
   border-radius: var(--r-lg);
   margin-top: 12px;
+  margin-bottom: 16px;
   transition: color var(--ease), border-color var(--ease), background var(--ease);
 }
 
@@ -2046,3 +2047,92 @@ details.faq-item[open] summary { color: var(--text); }
 
 /* Stacked block button (second in a stack) */
 .btn-stacked { margin-top: 12px; }
+
+.cohort-beta {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.cohort-access {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* Beta cohort trust / clarity cards */
+.beta-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0 0 28px;
+}
+
+.beta-highlight-card {
+  background: #ffffff;
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-xl);
+  padding: 22px 20px;
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+}
+
+.beta-highlight-card:hover {
+  border-color: rgba(29,158,117,0.35);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.beta-highlight-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+
+.beta-highlight-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beta-highlight-card li {
+  font-size: 13.5px;
+  color: var(--text-2);
+  line-height: 1.65;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-3);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.beta-highlight-card li:last-child {
+  border-bottom: none;
+}
+
+.beta-highlight-card li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.beta-highlight-card p {
+  font-size: 13.5px;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+.beta-proof {
+  margin-top: 12px;
+  color: var(--brand-dark);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .beta-highlights {
+    grid-template-columns: 1fr;
+  }
+}
