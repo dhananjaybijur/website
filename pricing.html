@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing | Doors2AI Programs</title>
-  <meta name="description" content="View Doors2AI program pricing, cohort structure, and learning outcomes for our web, full stack, and AI development paths.">
+  <title>Pricing | Beta Cohort at doors2ai</title>
+  <meta name="description" content="Beta Cohort pricing at doors2ai — beginner-friendly 12-week live program in AI-powered full-stack development. Limited beta access. Future learning paths coming soon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://doors2ai.com/pricing.html">
   <link rel="icon" href="doors2ai_logo.png">
-  <meta property="og:title" content="Pricing | Doors2AI Programs">
-  <meta property="og:description" content="View Doors2AI program pricing, cohort structure, and learning outcomes for our web, full stack, and AI development paths.">
+  <meta property="og:title" content="Pricing | Beta Cohort at doors2ai">
+  <meta property="og:description" content="Beta Cohort pricing at doors2ai — beginner-friendly 12-week live program in AI-powered full-stack development. Limited beta access. Future learning paths coming soon.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://doors2ai.com/pricing.html">
   <meta property="og:image" content="https://doors2ai.com/doors2ai_logo.png">
@@ -21,11 +21,138 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=20260412">
   <style>
-    .pricing-grid { align-items: stretch; }
-    .pricing-card { display: flex; flex-direction: column; height: 100%; }
-    .pricing-includes { flex: 1 1 auto; }
-    .pricing-ideal { margin-top: 18px; min-height: 110px; font-size: 15px; color: var(--text-2); }
-    .pricing-cta-btn { margin-top: auto; }
+    /* ── Beta Cohort pricing card (centered, single) ─────────────────── */
+    .bc-pricing-wrap {
+      margin-top: 8px;
+    }
+    .bc-pricing-card {
+      background: var(--bg);
+      border: 1.5px solid #CFEDE3;
+      border-radius: 14px;
+      padding: 36px 40px;
+      max-width: 520px;
+    }
+    .bc-pricing-top {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+    }
+    .bc-pricing-title {
+      font-size: clamp(18px, 2.5vw, 22px); font-weight: 700;
+      color: var(--text); margin: 0 0 6px;
+    }
+    .bc-pricing-badges {
+      font-size: 13px; color: var(--text-3); margin: 0 0 14px;
+    }
+    .bc-pricing-desc {
+      font-size: 14px; color: var(--text-2); line-height: 1.65;
+      margin: 0 0 24px;
+    }
+    .bc-price-display {
+      margin-bottom: 22px;
+    }
+    .bc-price-label {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--text-3); margin: 0 0 6px;
+    }
+    .bc-price-main {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      margin: 0 0 5px; line-height: 1.4;
+    }
+    .bc-price-subtext {
+      font-size: 13px; color: var(--text-2); margin: 0 0 4px;
+    }
+    .bc-price-note {
+      font-size: 12px; color: var(--text-2);
+      margin: 0;
+    }
+    .bc-divider {
+      border: none; border-top: 1px solid var(--border-2);
+      margin: 20px 0;
+    }
+    .bc-includes-label {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--text-3); margin: 0 0 12px;
+    }
+    .bc-includes-list {
+      list-style: none; padding: 0; margin: 0 0 24px;
+      display: flex; flex-direction: column; gap: 9px;
+    }
+    .bc-includes-list li {
+      font-size: 14px; color: var(--text-2); padding-left: 18px;
+      position: relative; line-height: 1.5;
+    }
+    .bc-includes-list li::before {
+      content: '✓'; position: absolute; left: 0;
+      color: var(--brand); font-weight: 700; font-size: 13px;
+    }
+    .bc-cta-row {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .bc-btn-primary {
+      display: inline-flex; align-items: center;
+      padding: 10px 20px; border-radius: 6px;
+      background: var(--brand); color: #fff;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      border: 1.5px solid var(--brand);
+      transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    }
+    .bc-btn-primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; transform: translateY(-1px); }
+    .bc-btn-secondary {
+      display: inline-flex; align-items: center;
+      padding: 10px 20px; border-radius: 6px;
+      background: transparent; color: var(--text-2);
+      font-size: 14px; font-weight: 500; text-decoration: none;
+      border: 1.5px solid var(--border);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .bc-btn-secondary:hover { border-color: var(--brand); color: var(--brand); }
+
+    @media (max-width: 560px) {
+      .bc-pricing-card { padding: 24px 20px; }
+      .bc-cta-row { flex-direction: column; }
+    }
+
+    /* ── Future path compact cards ───────────────────────────────────── */
+    .future-paths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .future-path-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border-2);
+      border-radius: 10px;
+      padding: 22px 20px;
+      opacity: 0.88;
+    }
+    .future-path-num {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--text-3);
+      margin-bottom: 6px;
+    }
+    .future-path-title {
+      font-size: 15px; font-weight: 700; color: var(--text);
+      margin: 0 0 8px;
+    }
+    .future-path-desc {
+      font-size: 13px; color: var(--text-2); line-height: 1.55;
+      margin: 0 0 14px;
+    }
+    .future-path-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .future-path-weeks {
+      font-size: 11px; font-weight: 600; padding: 2px 8px;
+      border-radius: 4px; background: var(--bg);
+      border: 1px solid var(--border-2); color: var(--text-2);
+    }
+    .coming-soon-pill {
+      font-size: 11px; font-weight: 600; padding: 2px 8px;
+      border-radius: 4px; background: #FFF8E6;
+      border: 1px solid #F5DFA0; color: #A07800;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+      .future-paths-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -50,95 +177,55 @@
   <div class="page-hero page-hero-dark">
     <div class="page-hero-inner">
       <div class="section-label">Pricing</div>
-      <h1>Founding <em>Cohort</em></h1>
-      <p>One-time payment per program.<br>No subscriptions. No hidden fees.<br>Payment plans available for Path 3.</p>
+      <h1>Beta Cohort — <em>Get started</em></h1>
+      <p>No subscriptions. No hidden fees.<br>Start with the Beta Cohort — more learning paths coming soon.</p>
     </div>
   </div>
 
-  <!-- PRICING CARDS -->
+  <!-- BETA COHORT PRICING -->
   <section class="section">
     <div class="wrap">
-      <div class="pricing-grid">
-
-        <!-- Path 1 -->
-        <div class="pricing-card">
-          <div class="pricing-card-top">
-            <span class="prog-badge fe">PATH 1</span>
-          </div>
-          <h3>Web Development Foundations</h3>
-          <div class="pricing-duration">8–10 weeks · 4–6 hrs/week · Live weekend sessions</div>
-          <div class="pricing-amount">
-            <div class="price-was">90 CAD</div>
-            <div class="price">$70 USD</div>
-            <div class="price-note">₹5,000 INR</div>
-          </div>
-          <ul class="pricing-includes">
-            <li>Live weekend instruction &amp; Q&amp;A</li>
-            <li>Guided hands-on exercises</li>
-            <li>Instructor code reviews</li>
-            <li>Structured learning roadmap</li>
-            <li>Front End Portfolio project</li>
-            <li>Completion certificate</li>
-          </ul>
-          <p class="pricing-ideal"><strong>Ideal for:</strong> Beginners starting their web development journey and looking to build strong fundamentals.</p>
-          <a href="contact.html" class="pricing-cta-btn secondary">Apply for Cohort</a>
-        </div>
-
-        <!-- Path 2 -->
-        <div class="pricing-card">
-          <div class="pricing-card-top">
-            <span class="prog-badge fs">PATH 2</span>
-          </div>
-          <h3>Full Stack Development</h3>
-          <div class="pricing-duration">12–14 weeks · 6–8 hrs/week · Live weekend sessions</div>
-          <div class="pricing-amount">
-            <div class="price-was">$200 CAD</div>
-            <div class="price">$150 USD</div>
-            <div class="price-note">₹10,000 INR</div>
-          </div>
-          <ul class="pricing-includes">
-            <li>Live weekend instruction &amp; Q&amp;A</li>
-            <li>Guided hands-on exercises</li>
-            <li>Instructor code reviews</li>
-            <li>Full stack portfolio project</li>
-            <li>GitHub project guidance</li>
-            <li>Completion certificate</li>
-          </ul>
-          <p class="pricing-ideal"><strong>Ideal for:</strong> Beginner to intermediate learners ready to build full stack applications. Recommended after completing Path 1 or equivalent frontend experience.</p>
-          <a href="contact.html" class="pricing-cta-btn secondary">Apply for Cohort</a>
-        </div>
-
-        <!-- Path 3 — Flagship -->
-        <div class="pricing-card featured">
-          <div class="pricing-card-top">
-            <span class="prog-badge ai">PATH 3</span>
-            <span class="prog-flagship">Flagship Program</span>
-          </div>
-          <h3>AI Application Development</h3>
-          <div class="pricing-duration">16 weeks · 6–8 hrs/week · Live weekend sessions</div>
-          <div class="pricing-amount">
-            <div class="price-was">$275 CAD</div>
-            <div class="price">$200 USD</div>
-            <div class="price-note">₹15,000 INR</div>
-          </div>
-          <ul class="pricing-includes">
-            <li>Live weekend instruction &amp; Q&amp;A</li>
-            <li>Guided hands-on exercises</li>
-            <li>Instructor architecture guidance</li>
-            <li>AI-enabled full stack project</li>
-            <li>GitHub portfolio project</li>
-            <li>Completion certificate</li>
-            <li>Payment plan available</li>
-          </ul>
-          <p class="pricing-ideal"><strong>Ideal for:</strong> Intermediate learners and developers ready to build AI-powered applications. Recommended after completing Path 2 or equivalent programming experience.</p>
-          <a href="contact.html" class="pricing-cta-btn primary">Apply for Cohort</a>
-        </div>
-
+      <div class="section-head">
+        <div class="section-label">Beta Cohort</div>
+        <h2>Current program</h2>
+        <p>One program available now.</p>
       </div>
+      <div class="bc-pricing-wrap">
+        <div class="bc-pricing-card">
 
-      <p class="pricing-note">
-        Regional pricing available. Applications required before enrollment is confirmed. Cohort sizes are limited.
-      </p>
+          <div class="bc-pricing-top">
+            <span class="prog-badge fe">Beta Cohort</span>
+          </div>
+          <h3 class="bc-pricing-title">AI-Powered Full Stack Development</h3>
+          <p class="bc-pricing-badges">12 weeks &bull; Beginner &bull; Live cohort</p>
+          <p class="bc-pricing-desc">Build your first AI-powered full-stack application through a structured, beginner-friendly program covering frontend, backend, databases, and AI integration.</p>
+
+          <div class="bc-price-display">
+            <p class="bc-price-label">Beta Access</p>
+            <p class="bc-price-main">Free for the Beta Cohort</p>
+            <p class="bc-price-subtext">Limited beta access for early participants</p>
+            <p class="bc-price-note">This program will be part of our paid learning paths in the future.</p>
+          </div>
+
+          <hr class="bc-divider">
+
+          <p class="bc-includes-label">What's included</p>
+          <ul class="bc-includes-list">
+            <li>Live weekend sessions with guided instruction</li>
+            <li>Hands-on coding with structured weekly progression</li>
+            <li>Build a complete full-stack + AI application</li>
+            <li>Backend APIs, database integration, and AI features</li>
+            <li>Guided project support</li>
+            <li>Deploy your application to production</li>
+          </ul>
+
+          <div class="bc-cta-row">
+            <a href="contact.html" class="bc-btn-primary">Apply Now</a>
+            <a href="curriculum.html" class="bc-btn-secondary">View Curriculum</a>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
@@ -183,30 +270,42 @@
     </div>
   </section>
 
-  <!-- FAQ TEASER -->
+  <!-- FUTURE LEARNING PATHS -->
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-label">Common questions</div>
-        <h2>Have questions about pricing?</h2>
-        <p>We've answered the most common pricing questions on the FAQ page. You can also contact us directly.</p>
+        <div class="section-label">Coming Soon</div>
+        <h2>Future learning paths at doors2ai</h2>
+        <p>After the Beta Cohort, learners will be able to continue into more specialized paths in frontend, full stack, and AI application development.</p>
       </div>
-      <div class="why-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-        <div class="why-card">
-          <h3>Are payment plans available?</h3>
-          <p>Yes — payment plans are available for Path 3. <a href="contact.html" style="color:var(--brand)">Contact us</a> before applying to discuss options.</p>
+      <div class="future-paths-grid">
+        <div class="future-path-card">
+          <div class="future-path-num">Path 1</div>
+          <h3 class="future-path-title">Web Development Foundations</h3>
+          <p class="future-path-desc">Focus on frontend fundamentals, responsive UI, React, and Next.js.</p>
+          <div class="future-path-footer">
+            <span class="future-path-weeks">8–10 weeks</span>
+            <span class="coming-soon-pill">Coming Soon</span>
+          </div>
         </div>
-        <div class="why-card">
-          <h3>What is the refund policy?</h3>
-          <p>A full refund is available if requested within the first 5 business days of the cohort start date. Contact us for details.</p>
+        <div class="future-path-card">
+          <div class="future-path-num">Path 2</div>
+          <h3 class="future-path-title">Full Stack Development</h3>
+          <p class="future-path-desc">Focus on APIs, backend architecture, database integration, and deployment.</p>
+          <div class="future-path-footer">
+            <span class="future-path-weeks">12–14 weeks</span>
+            <span class="coming-soon-pill">Coming Soon</span>
+          </div>
         </div>
-        <div class="why-card">
-          <h3>Do I need to pay upfront?</h3>
-          <p>Full payment is required before the cohort start date unless you are approved for a payment plan for Path 3.</p>
+        <div class="future-path-card">
+          <div class="future-path-num">Path 3</div>
+          <h3 class="future-path-title">AI Application Development</h3>
+          <p class="future-path-desc">Focus on AI APIs, prompt engineering, RAG, and modern AI workflows.</p>
+          <div class="future-path-footer">
+            <span class="future-path-weeks">16 weeks</span>
+            <span class="coming-soon-pill">Coming Soon</span>
+          </div>
         </div>
-      </div>
-      <div style="margin-top:32px">
-        <a href="faq.html" class="btn-secondary">View all FAQs →</a>
       </div>
     </div>
   </section>
@@ -215,11 +314,11 @@
   <section class="cta-section">
     <div class="cta-inner">
       <div class="section-label">Apply</div>
-      <h2>Ready to invest in your AI career?</h2>
-      <p>Tell us your background and we will help you choose the right learning path.</p>
+      <h2>Ready to join the Beta Cohort?</h2>
+      <p>Tell us a little about your background and goals. We will help you confirm whether the Beta Cohort is the right fit for you.</p>
       <div class="cta-buttons">
         <a href="contact.html" class="btn-cta-primary">Apply Now</a>
-        <a href="faq.html" class="btn-cta-ghost">Read the FAQ</a>
+        <a href="pricing.html" class="btn-cta-ghost">View Pricing</a>
       </div>
     </div>
   </section>
@@ -233,9 +332,10 @@
       </div>
       <div class="footer-col">
         <h4>Programs</h4>
-        <a href="programs.html#frontend">Web Development Foundations</a>
-        <a href="programs.html#fullstack">Full Stack Development</a>
-        <a href="programs.html#agentic">AI Application Development</a>
+        <a href="programs.html#beta-cohort">Beta Cohort</a>
+        <a href="programs.html#frontend">Web Development Foundations (Coming soon)</a>
+        <a href="programs.html#fullstack">Full Stack Development (Coming soon)</a>
+        <a href="programs.html#agentic">AI Application Development (Coming soon)</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>

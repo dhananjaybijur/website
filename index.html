@@ -86,6 +86,51 @@
       .beta-steps { grid-template-columns: 1fr; }
       .beta-steps .beta-step:last-child { grid-column: 1; }
     }
+
+    /* ── Future path compact cards ───────────────────────────────── */
+    .future-paths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .future-path-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border-2);
+      border-radius: 10px;
+      padding: 22px 20px;
+      opacity: 0.88;
+    }
+    .future-path-num {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--text-3);
+      margin-bottom: 6px;
+    }
+    .future-path-title {
+      font-size: 15px; font-weight: 700; color: var(--text);
+      margin: 0 0 8px;
+    }
+    .future-path-desc {
+      font-size: 13px; color: var(--text-2); line-height: 1.55;
+      margin: 0 0 14px;
+    }
+    .future-path-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .future-path-weeks {
+      font-size: 11px; font-weight: 600; padding: 2px 8px;
+      border-radius: 4px; background: var(--bg);
+      border: 1px solid var(--border-2); color: var(--text-2);
+    }
+    .coming-soon-pill {
+      font-size: 11px; font-weight: 600; padding: 2px 8px;
+      border-radius: 4px; background: #FFF8E6;
+      border: 1px solid #F5DFA0; color: #A07800;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    @media (max-width: 768px) {
+      .future-paths-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .future-paths-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -290,127 +335,43 @@
     </div>
   </section>
 
-  <!-- LEARNING PATH -->
-  <section class="path-section">
-    <div class="path-inner">
-      <div class="section-head">
-        <div class="section-label">Learning Path</div>
-        <h2>One structured learning path. Three progressive paths.</h2>
-        <p>Start with foundations, progress into full stack development, and then move into AI application development through a structured path designed for students and working professionals.</p>
-      </div>
-      <div class="path-track">
-        <div class="path-step track-fe">
-          <div class="path-num">Path 1</div>
-          <h3>Web Development Foundations</h3>
-          <p>Build programming fundamentals and learn how to create modern responsive web applications. Ideal for beginners starting their journey.</p>
-          <div class="path-tech-tags">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Next.js</span>
-          </div>
-          <span class="path-badge badge-fe">8–10 weeks</span>
-        </div>
-        <div class="path-step track-fs">
-          <div class="path-num">Path 2</div>
-          <h3>Full Stack Development</h3>
-          <p>Learn how complete applications work end to end, including backend services, APIs, databases, and deployment.</p>
-          <div class="path-tech-tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">FastAPI</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Git/GitHub</span>
-            <span class="tech-tag">APIs</span>
-            <span class="tech-tag">Deployment</span>
-          </div>
-          <span class="path-badge badge-fs">12–14 weeks</span>
-        </div>
-        <div class="path-step track-ai">
-          <div class="path-num">Path 3</div>
-          <h3>AI Application Development</h3>
-          <p>Build practical AI applications using modern LLM tools, retrieval workflows, and AI application patterns.</p>
-          <div class="path-tech-tags">
-            <span class="tech-tag">LLMs</span>
-            <span class="tech-tag">RAG</span>
-            <span class="tech-tag">LangChain</span>
-            <span class="tech-tag">LangGraph</span>
-            <span class="tech-tag">AI Workflows</span>
-          </div>
-          <span class="path-badge badge-ai">16 weeks</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROGRAMS PREVIEW -->
+  <!-- FUTURE LEARNING PATHS -->
   <section class="section section-alt">
     <div class="wrap">
       <div class="section-head">
-        <div class="section-label">Programs</div>
-        <h2>Choose your starting point.</h2>
-        <p>Start where you are and progress through a structured learning path designed to help you build real applications, strengthen your portfolio, and grow toward AI development.</p>
+        <div class="section-label">Coming Soon</div>
+        <h2>Future learning paths at doors2ai</h2>
+        <p>We are building structured learning paths in web development, full stack development, and AI application development. Start with the Beta Cohort and continue into more advanced programs.</p>
       </div>
-      <div class="programs-grid">
+      <div class="future-paths-grid">
 
-        <div class="prog-card">
-          <div class="prog-card-header">
-            <span class="prog-badge fe">Path 1</span>
-          </div>
-          <h3>Web Development Foundations</h3>
-          <div class="prog-meta">
-            8–10 weeks <span class="prog-meta-dot"></span> Beginner
-          </div>
-          <ul class="prog-modules">
-            <li>HTML, CSS, and JavaScript foundations</li>
-            <li>TypeScript and modern frontend development</li>
-            <li>React and component-based UI building</li>
-            <li>Next.js and deployment basics</li>
-            <li>Project you can showcase and explain</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="programs.html#frontend" class="prog-cta">View full program →</a>
+        <div class="future-path-card">
+          <div class="future-path-num">Path 1</div>
+          <h3 class="future-path-title">Web Development Foundations</h3>
+          <p class="future-path-desc">Focus on frontend fundamentals, responsive UI, React, and Next.js.</p>
+          <div class="future-path-footer">
+            <span class="future-path-weeks">8–10 weeks</span>
+            <span class="coming-soon-pill">Coming Soon</span>
           </div>
         </div>
 
-        <div class="prog-card">
-          <div class="prog-card-header">
-            <span class="prog-badge fs">Path 2</span>
-          </div>
-          <h3>Full Stack Development</h3>
-          <div class="prog-meta">
-            12–14 weeks <span class="prog-meta-dot"></span> Beginner to Intermediate
-          </div>
-          <ul class="prog-modules">
-            <li>Python and backend development basics</li>
-            <li>FastAPI and API development</li>
-            <li>PostgreSQL and database integration</li>
-            <li>Git/GitHub and practical project workflow</li>
-            <li>Full stack application project</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="programs.html#fullstack" class="prog-cta">View full program →</a>
+        <div class="future-path-card">
+          <div class="future-path-num">Path 2</div>
+          <h3 class="future-path-title">Full Stack Development</h3>
+          <p class="future-path-desc">Focus on APIs, backend architecture, database integration, and deployment.</p>
+          <div class="future-path-footer">
+            <span class="future-path-weeks">12–14 weeks</span>
+            <span class="coming-soon-pill">Coming Soon</span>
           </div>
         </div>
 
-        <div class="prog-card featured">
-          <div class="prog-card-header">
-            <span class="prog-badge ai">Path 3</span>
-          </div>
-          <h3>AI Application Development</h3>
-          <div class="prog-meta">
-            16 weeks <span class="prog-meta-dot"></span> Intermediate
-          </div>
-          <ul class="prog-modules">
-            <li>LLM foundations and prompting basics</li>
-            <li>Retrieval-augmented generation (RAG)</li>
-            <li>LangChain and LangGraph workflows</li>
-            <li>AI workflows and application patterns</li>
-            <li>Practical AI application capstone</li>
-          </ul>
-          <div class="prog-footer">
-            <a href="programs.html#agentic" class="prog-cta">View full program →</a>
+        <div class="future-path-card">
+          <div class="future-path-num">Path 3</div>
+          <h3 class="future-path-title">AI Application Development</h3>
+          <p class="future-path-desc">Focus on AI APIs, prompt engineering, RAG, and modern AI workflows.</p>
+          <div class="future-path-footer">
+            <span class="future-path-weeks">16 weeks</span>
+            <span class="coming-soon-pill">Coming Soon</span>
           </div>
         </div>
 
@@ -467,12 +428,12 @@
   <!-- CTA -->
   <section class="cta-section">
     <div class="cta-inner">
-      <div class="section-label">Start your path</div>
-      <h2>Ready to learn seriously and build with confidence?</h2>
-      <p>Join doors2ai and follow a structured learning path designed for students and working professionals. Build real applications, strengthen your portfolio, and grow toward AI development through live weekend learning and practical project work.</p>
+      <div class="section-label">Apply</div>
+      <h2>Ready to join the Beta Cohort?</h2>
+      <p>Tell us a little about your background and goals. We will help you confirm whether the Beta Cohort is the right fit for you.</p>
       <div class="cta-buttons">
         <a href="contact.html" class="btn-cta-primary">Apply Now</a>
-        <a href="curriculum.html" class="btn-cta-ghost">View Curriculum</a>
+        <a href="pricing.html" class="btn-cta-ghost">View Pricing</a>
       </div>
     </div>
   </section>
@@ -486,9 +447,10 @@
       </div>
       <div class="footer-col">
         <h4>Programs</h4>
-        <a href="programs.html#frontend">Web Development Foundations</a>
-        <a href="programs.html#fullstack">Full Stack Development</a>
-        <a href="programs.html#agentic">AI Application Development</a>
+        <a href="programs.html#beta-cohort">Beta Cohort</a>
+        <a href="programs.html#frontend">Web Development Foundations (Coming soon)</a>
+        <a href="programs.html#fullstack">Full Stack Development (Coming soon)</a>
+        <a href="programs.html#agentic">AI Application Development (Coming soon)</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>

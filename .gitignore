@@ -1,2 +1,7 @@
 # Claude Code local configuration and memory
 .claude/
+
+# Local archive and backup folders
+archive/
+backup/
+backup_apr_23_2026/
